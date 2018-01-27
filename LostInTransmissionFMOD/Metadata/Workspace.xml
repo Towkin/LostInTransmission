@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="Workspace" id="{88096ed7-a6ca-4f51-b6a0-61834016b4ce}">
+        <property name="builtBanksOutputDirectory">
+            <value>../LostInTransmissionUnity/Assets/FMOD/Banks</value>
+        </property>
+        <relationship name="masterEventFolder">
+            <destination>{e59ce028-58df-443c-9f55-ad34d1b22346}</destination>
+        </relationship>
+        <relationship name="masterTagFolder">
+            <destination>{6fa5d9c0-df53-4ce5-8374-26c5e65f7087}</destination>
+        </relationship>
+        <relationship name="masterEffectPresetFolder">
+            <destination>{10051aae-cf9d-4738-adac-0593c772b1b0}</destination>
+        </relationship>
+        <relationship name="masterParameterPresetFolder">
+            <destination>{e51cc6c7-cb9c-4ea9-9074-4af3fccdbcac}</destination>
+        </relationship>
+        <relationship name="masterBankFolder">
+            <destination>{8e9a6bca-337a-463c-9bdc-38010af12b7e}</destination>
+        </relationship>
+        <relationship name="masterAssetFolder">
+            <destination>{5069f8d1-914d-4bfa-ad3a-cdaf6a69de1c}</destination>
+        </relationship>
+        <relationship name="mixer">
+            <destination>{cbf38b6e-84b8-4549-97be-27797a2d9ef8}</destination>
+        </relationship>
+        <relationship name="platforms">
+            <destination>{8170666a-1456-4680-997a-a0f1a9ee5af9}</destination>
+        </relationship>
+    </object>
+</objects>
