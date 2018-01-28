@@ -12,6 +12,8 @@ public class RouterController : MonoBehaviour {
     [SerializeField]
     UnityEngine.UI.Image m_MessageImage;
 
+    [SerializeField]
+    UnityEngine.UI.Button m_SendButton;
 
     [SerializeField]
     UnityEngine.UI.Text m_SenderText;
@@ -53,6 +55,7 @@ public class RouterController : MonoBehaviour {
         m_MessageImage.sprite = m_DefaultImage;
         m_SenderText.text = "";
         m_RecieverText.text = "";
+        m_SendButton.gameObject.SetActive(false);
     }
 
     public void SendMessage()
@@ -211,7 +214,7 @@ public class RouterController : MonoBehaviour {
         var messages = query.MessageText;
 
         var optionsBuilderList = new List<OptionButtonBuilder>();
-
+        bool isDone = true;        
         foreach (var part in messages)
         {
             int partStart = builder.Length;
@@ -225,8 +228,13 @@ public class RouterController : MonoBehaviour {
                     m_CharIndices = new Vector2Int(partStart, builder.Length),
                     m_OptionSetIndex = part.OptionsSetIndex
                 });
-            }
+                if (!part.HasBeenSet)
+                    isDone = false;
+            }            
         }
+        if (isDone)
+            m_SendButton.gameObject.SetActive(true);
+        
         m_MessageText.text = builder.ToString();
 
         StartCoroutine(BuildButtons(optionsBuilderList, query.Data.OptionSet));
