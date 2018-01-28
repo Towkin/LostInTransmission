@@ -15,7 +15,8 @@ public class Faction : MonoBehaviour {
     [SerializeField]
     GameObject m_Router;
 
-    
+    [SerializeField]
+    GameObject m_SignalTemplate;
 
     [SerializeField]
     GameObject m_FirstContact;
@@ -120,8 +121,11 @@ public class Faction : MonoBehaviour {
             float messageValue = 0.0f;
 
             foreach (var mood in postMessageMood)
-                messageValue += Mathf.Pow(m_MoodRate, Mathf.Abs(mood.Value)) * m_MoodScale;
-
+            {
+                if (!factionMood.ContainsKey(mood.Key))
+                    factionMood.Add(mood.Key, 0.0f);
+                messageValue += Mathf.Max(0.01f, Mathf.Log10(Mathf.Abs(mood.Value - factionMood[mood.Key])));
+            }
             if(messageValue > bestMessageValue)
             {
                 bestMessageValue = messageValue;
@@ -132,9 +136,38 @@ public class Faction : MonoBehaviour {
         if (bestMessage == null)
             return;
 
-        m_Router.GetComponent<RouterController>().PushMessage(bestMessage, gameObject, mostMoodyFaction);
 
-        // TODO: Decrease values here.
+        SendMessage(bestMessage, mostMoodyFaction);
+
+        // Remove some mood as we sent a message!
+        foreach (var f in new[] { gameObject, mostMoodyFaction })
+        {
+            if (!m_Moods.ContainsKey(f))
+                m_Moods.Add(f, new Dictionary<string, float>());
+
+            foreach (var mood in bestMessage.MoodSet)
+            {
+                if (!m_Moods[f].ContainsKey(mood.Name))
+                    m_Moods[f].Add(mood.Name, 0.0f);
+
+                m_Moods[f][mood.Name] -= mood.Modification / 2;
+            }
+        }
+    }
+
+    void SendMessage(TranslateMessageData messageData, GameObject reciever)
+    {
+        var signalObject = Instantiate(m_SignalTemplate);
+        signalObject.transform.position = gameObject.transform.position;
+
+        var signal = signalObject.GetComponent<MessageSignal>();
+        signal.m_Goal = m_Router;
+        signal.m_Query = new MessageQuery()
+        {
+            Sender = gameObject,
+            Reciever = reciever
+        };
+        signal.m_Query.SetData(messageData);
     }
 
     Dictionary<string, float> GetTotalMood(GameObject faction)

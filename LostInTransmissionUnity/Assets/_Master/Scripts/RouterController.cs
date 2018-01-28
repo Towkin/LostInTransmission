@@ -23,6 +23,9 @@ public class RouterController : MonoBehaviour {
     GameObject m_OptionDropdownTemplate;
 
     [SerializeField]
+    GameObject m_SignalTemplate;
+
+    [SerializeField]
     Color m_OptionTextColor = Color.grey;
     [SerializeField]
     float m_OptionTextPadding = 8;
@@ -45,25 +48,25 @@ public class RouterController : MonoBehaviour {
 
         if (m_BackLog.Count > 0)
             BuildMessage(m_BackLog[0]);
-        
 
-        sendQuery.Reciever.GetComponent<Faction>().RecieveMessage(sendQuery);
+        var signalObject = Instantiate(m_SignalTemplate);
+        signalObject.transform.position = gameObject.transform.position;
 
+        var signal = signalObject.GetComponent<MessageSignal>();
+        signal.m_Goal = sendQuery.Reciever;
+        signal.m_Query = sendQuery;
     }
 
-    public void PushMessage(TranslateMessageData messageData, GameObject sender, GameObject reciever)
+    public void PushMessage(MessageQuery query)
     {
-        var query = new MessageQuery()
-        {
-            Sender = sender,
-            Reciever = reciever
-        };
-        query.SetData(messageData);
-        
         m_BackLog.Add(query);
 
         if (m_BackLog.Count == 1)
+        {
             BuildMessage(m_BackLog[0]);
+
+        }
+            
     }
 
     public void SetOptions(int optionSet, int optionIndex)
