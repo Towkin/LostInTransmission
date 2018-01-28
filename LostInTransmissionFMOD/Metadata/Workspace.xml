@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.01.10.00">
     <object class="Workspace" id="{88096ed7-a6ca-4f51-b6a0-61834016b4ce}">
-        <property name="builtBanksOutputDirectory">
-            <value>../LostInTransmissionUnity/Assets/FMOD/Banks</value>
-        </property>
+        <property name="builtBanksOutputDirectory"/>
         <relationship name="masterEventFolder">
             <destination>{e59ce028-58df-443c-9f55-ad34d1b22346}</destination>
         </relationship>

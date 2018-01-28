@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="AudioFile" id="{596f47e0-dcd1-4703-8225-c51e9f06271e}">
+        <property name="assetPath">
+            <value>Kalimba01.wav</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>44.0999985</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>8.3478231292517009</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{5069f8d1-914d-4bfa-ad3a-cdaf6a69de1c}</destination>
+        </relationship>
+    </object>
+</objects>
