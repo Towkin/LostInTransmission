@@ -37,6 +37,8 @@ public class Faction : MonoBehaviour {
     const float m_MoodRate = 0.5f;
     const float m_MoodScale = 1.5f;
 
+    Dictionary<string, int> m_MessageFrequency = new Dictionary<string, int>();
+
     Dictionary<GameObject, Dictionary<string, float>> m_Moods = new Dictionary<GameObject, Dictionary<string, float>>();
     
     TranslateMessageData[] Messages { get { return GetComponent<MessageDatabase>().Messages; } }
@@ -74,7 +76,7 @@ public class Faction : MonoBehaviour {
     void EventUpdate()
     {
         GameObject mostMoodyFaction = null;
-        float mostMoodyValue = 0.0f;
+        float mostMoodyValue = float.MinValue;
         foreach(var factionMoods in m_Moods)
         {
             if (factionMoods.Key == gameObject)
@@ -94,7 +96,7 @@ public class Faction : MonoBehaviour {
         var factionMood = GetTotalMood(mostMoodyFaction);
         
         TranslateMessageData bestMessage = null;
-        float bestMessageValue = 0.0f;
+        float bestMessageValue = float.MinValue;
         foreach (var message in Messages)
         {
             var postMessageMood = factionMood.ToDictionary(entry => entry.Key, entry => entry.Value);
@@ -124,8 +126,14 @@ public class Faction : MonoBehaviour {
             {
                 if (!factionMood.ContainsKey(mood.Key))
                     factionMood.Add(mood.Key, 0.0f);
-                messageValue += Mathf.Max(0.01f, Mathf.Log10(Mathf.Abs(mood.Value - factionMood[mood.Key])));
+                messageValue += Mathf.Abs(mood.Value - factionMood[mood.Key]);
             }
+
+            if (!m_MessageFrequency.ContainsKey(message.Text))
+                m_MessageFrequency.Add(message.Text, 0);
+
+            messageValue -= m_MessageFrequency[message.Text] * 5.0f;
+
             if(messageValue > bestMessageValue)
             {
                 bestMessageValue = messageValue;
@@ -135,8 +143,7 @@ public class Faction : MonoBehaviour {
 
         if (bestMessage == null)
             return;
-
-
+        
         SendMessage(bestMessage, mostMoodyFaction);
 
         // Remove some mood as we sent a message!
@@ -168,6 +175,8 @@ public class Faction : MonoBehaviour {
             Reciever = reciever
         };
         signal.m_Query.SetData(messageData);
+
+        m_MessageFrequency[messageData.Text]++;
     }
 
     Dictionary<string, float> GetTotalMood(GameObject faction)

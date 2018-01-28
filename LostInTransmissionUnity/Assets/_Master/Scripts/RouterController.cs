@@ -20,6 +20,9 @@ public class RouterController : MonoBehaviour {
     UnityEngine.UI.Text m_RecieverText;
 
     [SerializeField]
+    Sprite m_DefaultImage;
+
+    [SerializeField]
     GameObject m_OptionDropdownTemplate;
 
     [SerializeField]
@@ -47,7 +50,7 @@ public class RouterController : MonoBehaviour {
         m_Buttons.Clear();
 
         m_MessageText.text = "";
-        //m_MessageImage.sprite
+        m_MessageImage.sprite = m_DefaultImage;
         m_SenderText.text = "";
         m_RecieverText.text = "";
     }

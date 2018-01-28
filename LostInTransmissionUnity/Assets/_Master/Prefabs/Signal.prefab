@@ -53,7 +53,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Goal: {fileID: 0}
-  m_Speed: 10
+  m_Speed: 100
 --- !u!212 &212728470580746250
 SpriteRenderer:
   m_ObjectHideFlags: 1
