@@ -1,9 +1,12 @@
 ﻿using UnityEngine;
-using UnityEditor;
 using System;
 using System.Linq;
 using System.Collections.Generic;
 using System.IO;
+
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
 
 
 [Serializable]
@@ -115,6 +118,7 @@ public class MessageDatabase : MonoBehaviour
         OptionMoodValue = 4
     }
 
+#if UNITY_EDITOR
     public void LoadDb()
     {
         List<TranslateMessageDataLister> messages = new List<TranslateMessageDataLister>();
@@ -196,4 +200,5 @@ public class MessageDatabase : MonoBehaviour
             }
         }
     }
+#endif
 }
