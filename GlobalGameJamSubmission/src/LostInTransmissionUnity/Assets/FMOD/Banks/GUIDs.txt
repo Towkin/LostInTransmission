@@ -1,0 +1,13 @@
+{caa1fe04-0728-4f04-8d45-41e6ad0e5f1a} event:/Effects/UI/Button_Navigate
+{18cffcd5-ddfd-4a0a-8fed-4001c47e3638} event:/Effects/UI/Button_Select
+{3d77914c-cfd5-47e9-826f-fa3321c34c7a} event:/Effects/UI/Button_Send
+{5e4e4491-0682-419f-9491-79256469dde8} event:/Effects/UI/Menu_Dropdown
+{b87ab596-d2df-42c0-a205-3caf881d493a} event:/Soundtrack/Soundtrack
+{df72e552-80ac-421b-8841-27d20ffe3b08} event:/Voice/Empire
+{aad3a0bf-1626-4fdc-ba70-5068d91d887b} event:/Voice/Robot
+{ca94b363-71e4-4151-854a-50419d1f22a0} event:/Voice/Snail
+{9ab855d5-ab29-459b-95bf-da80d9d4c75b} bus:/
+{95dc2cf8-04b2-4001-88b9-0d29f4f851f9} bus:/Music
+{486c133f-1d97-406e-b900-816e8d232b6b} bus:/UI
+{ba5dcf3b-0eee-4326-a77f-075b8fda4b3a} bus:/Voice
+{eab49a5b-c7a0-4f4e-bcf9-a5c0fd588d2c} bank:/Master Bank

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="ParameterPreset" id="{d00291f8-bc74-4f7d-b6c1-7a38c2ef234d}">
+        <property name="name">
+            <value>MusicOverTime</value>
+        </property>
+        <relationship name="folder">
+            <destination>{e51cc6c7-cb9c-4ea9-9074-4af3fccdbcac}</destination>
+        </relationship>
+        <relationship name="parameter">
+            <destination>{5dc3f615-2647-4a34-a1b9-89ba499afd9b}</destination>
+        </relationship>
+    </object>
+    <object class="GameParameter" id="{5dc3f615-2647-4a34-a1b9-89ba499afd9b}">
+        <property name="maximum">
+            <value>10</value>
+        </property>
+        <property name="initialValue">
+            <value>0</value>
+        </property>
+    </object>
+</objects>
