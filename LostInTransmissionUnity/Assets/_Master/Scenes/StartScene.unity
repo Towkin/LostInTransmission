@@ -450,6 +450,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_MessageText: {fileID: 1321756333}
   m_MessageImage: {fileID: 1662442079}
+  m_SendButton: {fileID: 1688555539}
   m_SenderText: {fileID: 83919381}
   m_RecieverText: {fileID: 1874942144}
   m_DefaultImage: {fileID: 21300000, guid: 529767f02df378a4882e4bc5aeca5289, type: 3}
