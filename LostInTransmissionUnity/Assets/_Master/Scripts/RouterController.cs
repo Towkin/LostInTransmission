@@ -36,6 +36,22 @@ public class RouterController : MonoBehaviour {
     List<GameObject> m_Buttons = new List<GameObject>();
     List<GameObject> m_DropdownOptions = new List<GameObject>();
 
+    public void Cleanup()
+    {
+        foreach (var item in m_DropdownOptions)
+            Destroy(item);
+        m_DropdownOptions.Clear();
+
+        foreach (var button in m_Buttons)
+            Destroy(button);
+        m_Buttons.Clear();
+
+        m_MessageText.text = "";
+        //m_MessageImage.sprite
+        m_SenderText.text = "";
+        m_RecieverText.text = "";
+    }
+
     public void SendMessage()
     {
         if (m_BackLog.Count == 0)
@@ -46,8 +62,7 @@ public class RouterController : MonoBehaviour {
         m_BackLog.RemoveAt(0);
         m_History.Add(sendQuery);
 
-        if (m_BackLog.Count > 0)
-            BuildMessage(m_BackLog[0]);
+        Cleanup();
 
         var signalObject = Instantiate(m_SignalTemplate);
         signalObject.transform.position = gameObject.transform.position;
@@ -55,6 +70,10 @@ public class RouterController : MonoBehaviour {
         var signal = signalObject.GetComponent<MessageSignal>();
         signal.m_Goal = sendQuery.Reciever;
         signal.m_Query = sendQuery;
+
+        if (m_BackLog.Count > 0)
+            BuildMessage(m_BackLog[0]);
+
     }
 
     public void PushMessage(MessageQuery query)
@@ -75,12 +94,13 @@ public class RouterController : MonoBehaviour {
             return;
 
         m_BackLog[0].MessageOptions[optionSet].CurrentOption = optionIndex;
+        Cleanup();
         BuildMessage(m_BackLog[0]);
     }
 
     // Use this for initialization
     void Start () {
-        
+        Cleanup();
     }
 
     // Update is called once per frame
@@ -179,14 +199,7 @@ public class RouterController : MonoBehaviour {
 
     void BuildMessage(MessageQuery query)
     {
-        foreach (var item in m_DropdownOptions)
-            Destroy(item);
-        m_DropdownOptions.Clear();
-
-        foreach (var button in m_Buttons)
-            Destroy(button);
-        m_Buttons.Clear();
-
+        
         m_SenderText.text = query.Sender.GetComponent<Faction>().FactionName;
         m_RecieverText.text = query.Reciever.GetComponent<Faction>().FactionName;
         m_MessageImage.sprite = query.Sender.GetComponent<Faction>().FactionImage;
