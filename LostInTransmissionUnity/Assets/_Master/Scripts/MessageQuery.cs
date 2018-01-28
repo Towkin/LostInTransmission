@@ -73,7 +73,7 @@ public class MessageQuery {
         public int OptionsSetIndex { get { return m_OptionSetIndex; } }
         public int CurrentOption
         {
-            get { return m_CurrentOption; } 
+            get { return Mathf.Max(m_CurrentOption, 0); } 
             set
             {
                 if (m_OptionSetIndex == -1)
