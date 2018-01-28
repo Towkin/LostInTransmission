@@ -4,9 +4,17 @@ using System.Reflection;
 using System.Text;
 using UnityEngine;
 
+
+
 public class RouterController : MonoBehaviour {
     [SerializeField]
     UnityEngine.UI.Text m_Text;
+
+    [SerializeField]
+    UnityEngine.UI.Text m_SenderText;
+
+    [SerializeField]
+    UnityEngine.UI.Text m_RecieverText;
 
     [SerializeField]
     GameObject m_OptionDropdownTemplate;
@@ -16,17 +24,38 @@ public class RouterController : MonoBehaviour {
     [SerializeField]
     float m_OptionTextPadding = 8;
 
-    List<string> m_History;
+    List<MessageQuery> m_History = new List<MessageQuery>();
     List<MessageQuery> m_BackLog = new List<MessageQuery>();
 
     List<GameObject> m_Buttons = new List<GameObject>();
     List<GameObject> m_DropdownOptions = new List<GameObject>();
 
-    public void SendMessage(TranslateMessageData messageData)
+    public void SendMessage()
     {
-        var query = new MessageQuery();
+        if (m_BackLog.Count == 0)
+            return;
+
+        MessageQuery sendQuery = m_BackLog[0];
+        
+        m_BackLog.RemoveAt(0);
+        m_History.Add(sendQuery);
+
+        sendQuery.Reciever.GetComponent<Faction>().RecieveMessage(sendQuery);
+    }
+
+    public void PushMessage(TranslateMessageData messageData, GameObject sender, GameObject reciever)
+    {
+        var query = new MessageQuery()
+        {
+            Sender = sender,
+            Reciever = reciever
+        };
         query.SetData(messageData);
+        
         m_BackLog.Add(query);
+
+        if (m_BackLog.Count == 1)
+            BuildText(m_BackLog[0]);
     }
 
     public void SetOptions(int optionSet, int optionIndex)
@@ -41,18 +70,11 @@ public class RouterController : MonoBehaviour {
     // Use this for initialization
     void Start () {
         
-        SendMessage(GetComponent<MessageDatabase>().Messages[Random.Range(0, GetComponent<MessageDatabase>().Messages.Length)]);
-        
-        BuildText(m_BackLog[0]);
     }
 
     // Update is called once per frame
     void Update () {
-        //if(Input.GetButtonDown("Primary"))
-        //{
-        //    foreach (var item in m_DropdownOptions)
-        //        item.SetActive(false);
-        //}
+
     }
 
     class OptionButtonBuilder
@@ -153,7 +175,10 @@ public class RouterController : MonoBehaviour {
         foreach (var button in m_Buttons)
             Destroy(button);
         m_Buttons.Clear();
-        
+
+        m_SenderText.text = query.Sender.GetComponent<Faction>().FactionName;
+        m_RecieverText.text = query.Reciever.GetComponent<Faction>().FactionName;
+
         var builder = new StringBuilder();
         var messages = query.MessageText;
 
