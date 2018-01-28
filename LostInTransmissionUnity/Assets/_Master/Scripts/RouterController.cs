@@ -35,6 +35,9 @@ public class RouterController : MonoBehaviour {
     [SerializeField]
     float m_OptionTextPadding = 8;
 
+    [SerializeField]
+    UnityEngine.UI.Text m_BacklogText;
+
     List<MessageQuery> m_History = new List<MessageQuery>();
     List<MessageQuery> m_BackLog = new List<MessageQuery>();
 
@@ -56,6 +59,7 @@ public class RouterController : MonoBehaviour {
         m_SenderText.text = "";
         m_RecieverText.text = "";
         m_SendButton.gameObject.SetActive(false);
+        m_BacklogText.text = "";
     }
 
     public void SendMessage()
@@ -67,6 +71,7 @@ public class RouterController : MonoBehaviour {
         
         m_BackLog.RemoveAt(0);
         m_History.Add(sendQuery);
+              
 
         Cleanup();
 
@@ -216,6 +221,17 @@ public class RouterController : MonoBehaviour {
 
         var builder = new StringBuilder();
         var messages = query.MessageText;
+
+        foreach (var msg in m_History)
+        {
+            m_BacklogText.text += "\n";
+            m_BacklogText.text += msg.Sender.GetComponent<Faction>().FactionName + " to " + msg.Reciever.GetComponent<Faction>().FactionName + ": ";
+
+            foreach (var part in msg.MessageText)
+            {
+                m_BacklogText.text += part.Text;
+            }
+        }
 
         var optionsBuilderList = new List<OptionButtonBuilder>();
         bool isDone = true;        
