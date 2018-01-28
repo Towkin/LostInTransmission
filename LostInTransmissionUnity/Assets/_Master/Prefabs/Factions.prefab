@@ -374,7 +374,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e651f5a743a2484da4cb581c62a08dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Database: {fileID: 102900000, guid: b8f9ff414ea9d1d439fc57a9358e1c40, type: 3}
+  Database: {fileID: 102900000, guid: b2335e22b44a41f42a2ba6b1797f0c97, type: 3}
   m_Messages:
   - Text: '[Whoop]! Beautiful, [roro pofooie]! -Trade Empire'
     MoodSet: []
@@ -814,7 +814,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e651f5a743a2484da4cb581c62a08dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Database: {fileID: 102900000, guid: a102947628a84ac498de94b43efca832, type: 3}
+  Database: {fileID: 102900000, guid: f738ae7655e004d49bdf74d774262360, type: 3}
   m_Messages:
   - Text: Need [boop boop boop]. Send [blep].
     MoodSet: []
@@ -823,14 +823,617 @@ MonoBehaviour:
       Options:
       - Text: fungus to tackle.
         MoodSet:
-        - Name: hungry
-          Modification: 2
-        - Name: angry
-          Modification: -5
+        - Name: Friendly
+          Modification: -1
       - Text: slime to grease gear
-        MoodSet: []
+        MoodSet:
+        - Name: 'Friendly '
+          Modification: 2
+        - Name: Trading
+          Modification: 2
       - Text: slippery appendage.
-        MoodSet: []
+        MoodSet:
+        - Name: Confusing
+          Modification: 4
+      - Text: now
+        MoodSet:
+        - Name: Trading
+          Modification: 4
+    - Name: blep
+      Options:
+      - Text: persistently
+        MoodSet:
+        - Name: 'Confusing '
+          Modification: 2
+        - Name: Trading
+          Modification: 2
+      - Text: PDQ
+        MoodSet:
+        - Name: Friendly
+          Modification: -2
+  - Text: Send the [bleeep] parts.
+    MoodSet: []
+    OptionSet:
+    - Name: bleeep
+      Options:
+      - Text: new
+        MoodSet:
+        - Name: 'Friendly '
+          Modification: 3
+        - Name: Trading
+          Modification: 3
+      - Text: fucking
+        MoodSet:
+        - Name: Friendly
+          Modification: -5
+      - Text: fresh
+        MoodSet:
+        - Name: Confusing
+          Modification: -2
+  - Text: This [bing] is needed for us to harvest [bings]. [Wing-wong-bing].
+    MoodSet: []
+    OptionSet:
+    - Name: bing
+      Options:
+      - Text: planet
+        MoodSet:
+        - Name: Friendly
+          Modification: -2
+      - Text: resources
+        MoodSet:
+        - Name: Trading
+          Modification: 2
+      - Text: orb
+        MoodSet:
+        - Name: Confusing
+          Modification: -1
+    - Name: bings
+      Options:
+      - Text: resources
+        MoodSet:
+        - Name: Trading
+          Modification: 2
+      - Text: planet
+        MoodSet:
+        - Name: Confusing
+          Modification: 2
+      - Text: orb
+        MoodSet:
+        - Name: Confusing
+          Modification: 2
+    - Name: Wing-wong-bing
+      Options:
+      - Text: Please evacuate the premises
+        MoodSet:
+        - Name: Friendly
+          Modification: 2
+      - Text: Go to hell
+        MoodSet:
+        - Name: Friendly
+          Modification: -3
+      - Text: Kindly abandon planet
+        MoodSet:
+        - Name: Friendly
+          Modification: 2
+  - Text: We have decided to [ping] you to [parp] this [bing] is [ping-pong].
+    MoodSet: []
+    OptionSet:
+    - Name: ping
+      Options:
+      - Text: allow
+        MoodSet:
+        - Name: Friendly
+          Modification: 2
+      - Text: agree to
+        MoodSet:
+        - Name: Friendly
+          Modification: 1
+      - Text: contract
+        MoodSet:
+        - Name: Friendly
+          Modification: -2
+    - Name: parp
+      Options:
+      - Text: colonize
+        MoodSet:
+        - Name: Friendly
+          Modification: -3
+      - Text: dominate
+        MoodSet:
+        - Name: Friendly
+          Modification: -3
+      - Text: mine
+        MoodSet:
+        - Name: Friendly
+          Modification: 3
+    - Name: bing
+      Options:
+      - Text: planet
+        MoodSet:
+        - Name: Friendly
+          Modification: 1
+      - Text: resources
+        MoodSet:
+        - Name: Confusing
+          Modification: 1
+      - Text: orb
+        MoodSet:
+        - Name: Confusing
+          Modification: 1
+    - Name: ping-pong
+      Options:
+      - Text: beneficial for us both
+        MoodSet:
+        - Name: Friendly
+          Modification: 2
+      - Text: profitable action
+        MoodSet:
+        - Name: Friendly
+          Modification: 1
+      - Text: two clowns
+        MoodSet:
+        - Name: Confusing
+          Modification: 3
+  - Text: Stop [wing-wong-bong] or you will be removed by [weeo].
+    MoodSet: []
+    OptionSet:
+    - Name: wing-wong-bong
+      Options:
+      - Text: disturbing our operations
+        MoodSet:
+        - Name: Friendly
+          Modification: -1
+      - Text: hindering medical procedure
+        MoodSet:
+        - Name: Confusing
+          Modification: 2
+      - Text: alarming actions
+        MoodSet:
+        - Name: Confusing
+          Modification: 1
+    - Name: weeo
+      Options:
+      - Text: force
+        MoodSet:
+        - Name: Friendly
+          Modification: -1
+      - Text: war
+        MoodSet:
+        - Name: Friendly
+          Modification: -2
+      - Text: extermination
+        MoodSet:
+        - Name: Friendly
+          Modification: -3
+  - Text: There will be no [ompf] as long a you [wirr woom]. Give up or [bi weeo]!
+    MoodSet: []
+    OptionSet:
+    - Name: ompf
+      Options:
+      - Text: peace
+        MoodSet:
+        - Name: Friendly
+          Modification: 1
+      - Text: cease fire
+        MoodSet:
+        - Name: Friendly
+          Modification: -1
+      - Text: break off force
+        MoodSet:
+        - Name: Friendly
+          Modification: -1
+    - Name: wirr woom
+      Options:
+      - Text: continue aggression towards us
+        MoodSet:
+        - Name: Friendly
+          Modification: -1
+      - Text: keep bothering the robots
+        MoodSet:
+        - Name: Friendly
+          Modification: 1
+      - Text: mean harm to slaves
+        MoodSet:
+        - Name: Friendly
+          Modification: -2
+    - Name: bi weeo
+      Options:
+      - Text: be exterminated
+        MoodSet:
+        - Name: Friendly
+          Modification: -1
+      - Text: you will be forced
+        MoodSet:
+        - Name: Friendly
+          Modification: -1
+      - Text: continue to wage war
+        MoodSet:
+        - Name: Confusing
+          Modification: 2
+  - Text: 'We are [pingling] you want [ompf], [meep]. '
+    MoodSet: []
+    OptionSet:
+    - Name: pingling
+      Options:
+      - Text: happy to hear
+        MoodSet:
+        - Name: Friendly
+          Modification: 2
+      - Text: attentively absorbing that
+        MoodSet:
+        - Name: Friendly
+          Modification: 1
+      - Text: jubilant ears
+        MoodSet:
+        - Name: Confusing
+          Modification: 1
+    - Name: ompf
+      Options:
+      - Text: peace
+        MoodSet:
+        - Name: Friendly
+          Modification: 2
+      - Text: cease fire
+        MoodSet:
+        - Name: Friendly
+          Modification: 1
+      - Text: break off force
+        MoodSet:
+        - Name: Confusing
+          Modification: 2
+    - Name: meep
+      Options:
+      - Text: so do we
+        MoodSet:
+        - Name: Friendly
+          Modification: 2
+      - Text: comply
+        MoodSet:
+        - Name: Friendly
+          Modification: 1
+      - Text: we engage
+        MoodSet:
+        - Name: Confusing
+          Modification: 1
+  - Text: 'It is good to know [pleep] [parp] even the minds of [beep-beep]. [Bleep]
+      there with be [ompf] beteween us [plong]. '
+    MoodSet: []
+    OptionSet:
+    - Name: pleep
+      Options:
+      - Text: logic
+        MoodSet:
+        - Name: Friendly
+          Modification: 2
+      - Text: art
+        MoodSet:
+        - Name: Confusing
+          Modification: 1
+      - Text: math
+        MoodSet:
+        - Name: Confusing
+          Modification: 1
+    - Name: parp
+      Options:
+      - Text: dominates
+        MoodSet:
+        - Name: Friendly
+          Modification: -1
+      - Text: colonize
+        MoodSet:
+        - Name: Friendly
+          Modification: 1
+      - Text: mine
+        MoodSet:
+        - Name: Confusing
+          Modification: 1
+    - Name: beep-beep
+      Options:
+      - Text: organics
+        MoodSet:
+        - Name: Friendly
+          Modification: 1
+      - Text: pod-pods
+        MoodSet:
+        - Name: Confusing
+          Modification: 1
+      - Text: traders
+        MoodSet:
+        - Name: Trading
+          Modification: 2
+        - Name: Confusing
+          Modification: 1
+    - Name: Bleep
+      Options:
+      - Text: Now
+        MoodSet:
+        - Name: Friendly
+          Modification: 1
+      - Text: Presistently
+        MoodSet:
+        - Name: Confusing
+          Modification: 1
+      - Text: PQD
+        MoodSet:
+        - Name: Friendly
+          Modification: -1
+    - Name: ompf
+      Options:
+      - Text: peace
+        MoodSet:
+        - Name: Friendly
+          Modification: 2
+      - Text: ceasefire
+        MoodSet:
+        - Name: Friendly
+          Modification: 2
+      - Text: break off force
+        MoodSet:
+        - Name: Confusing
+          Modification: 2
+    - Name: plong
+      Options:
+      - Text: both
+        MoodSet:
+        - Name: Friendly
+          Modification: 2
+      - Text: coin
+        MoodSet:
+        - Name: Confusing
+          Modification: 2
+  - Text: You are [eeee]. We will continue to [wo-weeo] and [plip bo-bip] your [bing]
+      as long as we see fit!
+    MoodSet: []
+    OptionSet:
+    - Name: eeee
+      Options:
+      - Text: wrong
+        MoodSet:
+        - Name: Friendly
+          Modification: -2
+      - Text: broken
+        MoodSet:
+        - Name: Friendly
+          Modification: -1
+      - Text: an error
+        MoodSet:
+        - Name: Confusing
+          Modification: 3
+    - Name: wo-weeo
+      Options:
+      - Text: wage war
+        MoodSet:
+        - Name: Friendly
+          Modification: -1
+      - Text: exterminate
+        MoodSet:
+        - Name: Friendly
+          Modification: -2
+      - Text: use force
+        MoodSet:
+        - Name: Friendly
+          Modification: -1
+    - Name: plip bo-bip
+      Options:
+      - Text: take
+        MoodSet:
+        - Name: Friendly
+          Modification: -5
+      - Text: trade
+        MoodSet:
+        - Name: Trade
+          Modification: 2
+      - Text: have intimate association with
+        MoodSet:
+        - Name: Confusing
+          Modification: 2
+        - Name: Friendly
+          Modification: 2
+    - Name: bing
+      Options:
+      - Text: planets
+        MoodSet:
+        - Name: Friendly
+          Modification: -1
+      - Text: resources
+        MoodSet:
+        - Name: Trade
+          Modification: 2
+      - Text: orb
+        MoodSet:
+        - Name: Confusing
+          Modification: 1
+  - Text: We robots are in need of a [po bip] of [bing]. We would like to [plip bo-bip]
+      with you.
+    MoodSet: []
+    OptionSet:
+    - Name: po bip
+      Options:
+      - Text: large quantities of
+        MoodSet:
+        - Name: Trading
+          Modification: 2
+      - Text: huge sized
+        MoodSet:
+        - Name: Confusing
+          Modification: 2
+      - Text: expensive quality
+        MoodSet:
+        - Name: Trading
+          Modification: 2
+    - Name: bing
+      Options:
+      - Text: resources
+        MoodSet:
+        - Name: Trading
+          Modification: 2
+      - Text: planet
+        MoodSet:
+        - Name: Friendly
+          Modification: -2
+      - Text: orb
+        MoodSet:
+        - Name: Confusing
+          Modification: 2
+    - Name: plip bo-bip
+      Options:
+      - Text: enter a trade agreement
+        MoodSet:
+        - Name: Trading
+          Modification: 4
+      - Text: take your stuff
+        MoodSet:
+        - Name: Friendly
+          Modification: -4
+      - Text: have intimate association
+        MoodSet:
+        - Name: Confusing
+          Modification: 4
+        - Name: Friendly
+          Modification: 1
+  - Text: Your suggestion to [pip bo-blip] is [ping-pong]. We [ping].
+    MoodSet: []
+    OptionSet:
+    - Name: pip bo-blip
+      Options:
+      - Text: trade
+        MoodSet:
+        - Name: Trading
+          Modification: 3
+      - Text: take our stuff
+        MoodSet:
+        - Name: Friendly
+          Modification: -3
+      - Text: have intimate association
+        MoodSet:
+        - Name: Confusing
+          Modification: 2
+    - Name: ping-pong
+      Options:
+      - Text: benefical for us both
+        MoodSet:
+        - Name: Trading
+          Modification: 2
+        - Name: Friendly
+          Modification: 2
+      - Text: a profitable action
+        MoodSet:
+        - Name: Trading
+          Modification: 2
+      - Text: two clowns
+        MoodSet:
+        - Name: Confusing
+          Modification: 3
+    - Name: ping
+      Options:
+      - Text: agree
+        MoodSet:
+        - Name: Friendly
+          Modification: 2
+      - Text: allow it
+        MoodSet:
+        - Name: Friendly
+          Modification: -1
+      - Text: have a contract
+        MoodSet:
+        - Name: Trading
+          Modification: 2
+  - Text: What you offer [pi bip]. We [pi bo-bip].
+    MoodSet: []
+    OptionSet:
+    - Name: pi bip
+      Options:
+      - Text: have no value to us
+        MoodSet:
+        - Name: Trading
+          Modification: -2
+      - Text: is to small
+        MoodSet:
+        - Name: Confusing
+          Modification: 1
+      - Text: is a too small quantity
+        MoodSet:
+        - Name: Trading
+          Modification: -1
+    - Name: pi bo-bip
+      Options:
+      - Text: will not trade
+        MoodSet:
+        - Name: Trading
+          Modification: -2
+      - Text: do not want intimate association
+        MoodSet:
+        - Name: Friendly
+          Modification: -1
+      - Text: will not take your stuff
+        MoodSet:
+        - Name: Trading
+          Modification: -1
+  - Text: '[Pip bo-blip] is [eep]. Take your [eeee] [bing] elsewhere.'
+    MoodSet: []
+    OptionSet:
+    - Name: Pip bo-blip
+      Options:
+      - Text: trade
+        MoodSet:
+        - Name: Trading
+          Modification: 1
+      - Text: take our stuff
+        MoodSet:
+        - Name: Confusing
+          Modification: 2
+        - Name: Trading
+          Modification: 1
+      - Text: have intimate association
+        MoodSet:
+        - Name: Confusing
+          Modification: 2
+    - Name: eep
+      Options:
+      - Text: no longer desirable
+        MoodSet:
+        - Name: Trading
+          Modification: -2
+      - Text: bad
+        MoodSet:
+        - Name: Friendly
+          Modification: -2
+      - Text: short and ugly
+        MoodSet:
+        - Name: Friendly
+          Modification: -1
+        - Name: Confusing
+          Modification: -2
+    - Name: eeee
+      Options:
+      - Text: faulty
+        MoodSet:
+        - Name: Friendly
+          Modification: -2
+      - Text: broken
+        MoodSet:
+        - Name: Friendly
+          Modification: -1
+      - Text: errorous
+        MoodSet:
+        - Name: Confusing
+          Modification: 2
+    - Name: bing
+      Options:
+      - Text: resources
+        MoodSet:
+        - Name: Trade
+          Modification: -1
+      - Text: planet
+        MoodSet:
+        - Name: Friendly
+          Modification: -1
+        - Name: Confusing
+          Modification: 2
+      - Text: orb
+        MoodSet:
+        - Name: Confusing
+          Modification: 3
 --- !u!114 &114405753234351054
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -842,7 +1445,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e651f5a743a2484da4cb581c62a08dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Database: {fileID: 102900000, guid: c6481a193d2be634c89919f261142da2, type: 3}
+  Database: {fileID: 102900000, guid: 635f6537182dae94d82d7a5194fdd790, type: 3}
   m_Messages:
   - Text: '[Noot-noot]! A few of us have lost our [ell-ell] due to some [u-uish].
       Can we buy [fa ell-ell] from you? [Er-er], the Pod-Pods.'
@@ -898,7 +1501,9 @@ MonoBehaviour:
           Modification: 3
       - Text: pretty homes
         MoodSet:
-        - Name: Friendly Trading
+        - Name: 'Friendly '
+          Modification: 2
+        - Name: Trading
           Modification: 2
       - Text: figment of head trips
         MoodSet:
@@ -1039,7 +1644,7 @@ MonoBehaviour:
         - Name: Confusing
           Modification: 1
   - Text: Your [ik-ki] will get you [wheeee]! The pod-pods have just as much right
-      to the [poolka] as you. Cease your [hoststt] or [quen]!
+      to the [poolka] as you. Cease your [umbaat] or [quen]!
     MoodSet: []
     OptionSet:
     - Name: ik-ki
@@ -1110,8 +1715,10 @@ MonoBehaviour:
           Modification: 2
       - Text: your face fall off
         MoodSet:
-        - Name: Friendly Confusing
+        - Name: 'Friendly '
           Modification: -2
+        - Name: Confusing
+          Modification: 2
   - Text: '[Bee-eel]?'
     MoodSet: []
     OptionSet:
@@ -1268,7 +1875,7 @@ MonoBehaviour:
   - Text: '[Nyn]!'
     MoodSet: []
     OptionSet:
-    - Name: nyn
+    - Name: Nyn
       Options:
       - Text: Yes
         MoodSet:
@@ -1334,7 +1941,7 @@ MonoBehaviour:
   m_FirstContactMoodName: Friendly
   m_FirstContactMoodValue: 5
   m_FactionName: Snails
-  m_FactionImage: {fileID: 21300000, guid: dc5f5c8aa88605a4f9518a67523a2d43, type: 3}
+  m_FactionImage: {fileID: 21300000, guid: d83f334342f07ef4eb3b393c8c8f4e41, type: 3}
 --- !u!114 &114842971858905256
 MonoBehaviour:
   m_ObjectHideFlags: 1

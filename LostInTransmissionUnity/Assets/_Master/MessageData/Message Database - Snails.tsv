@@ -13,7 +13,8 @@ MessageText	OptionKey	OptionText	OptionMoodKey	OptionMoodValue
 		lies	Friendly	-3
 				
 	fa ell-ell	artificial shells	Trading	3
-		pretty homes	Friendly Trading	2
+		pretty homes	Friendly 	2
+			Trading	2
 		figment of head trips	Confusing	3
 				
 	Er-er	Kind	Friendly	2
@@ -52,7 +53,7 @@ I think we can put this [u-uish] behind us. We [dun-to-ti] your [ieew-vew] and w
 		stay where we are	Friendly	1
 		stop growing	Confusing	1
 				
-Your [ik-ki] will get you [wheeee]! The pod-pods have just as much right to the [poolka] as you. Cease your [hoststt] or [quen]!				
+Your [ik-ki] will get you [wheeee]! The pod-pods have just as much right to the [poolka] as you. Cease your [umbaat] or [quen]!				
 	ik-ki	insults	Friendly	-4
 		poking	Friendly	1
 		particle	Confusing	2
@@ -71,7 +72,8 @@ Your [ik-ki] will get you [wheeee]! The pod-pods have just as much right to the 
 				
 	quen	face the consequences	Friendly	-4
 		have some salt	Friendly	2
-		your face fall off	Friendly Confusing	-2
+		your face fall off	Friendly 	-2
+			Confusing	2
 				
 [Bee-eel]?	Bee-eel	Peace pretty please		
 		Pretty calm pennies		
@@ -114,7 +116,7 @@ Due to recent events we are short on [er-er] things. [Pod-pod ben-ka] [slofs] as
 		Explode	Friendly	-2
 		Change colour	Confusing	2
 				
-[Nyn]!	nyn	Yes	Friendly	2
+[Nyn]!	Nyn	Yes	Friendly	2
 		Amen	Confusing	1
 		Good enough	Friendly	-1
 				

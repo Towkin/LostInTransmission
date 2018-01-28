@@ -327,6 +327,21 @@ Prefab:
       propertyPath: m_Router
       value: 
       objectReference: {fileID: 318696713}
+    - target: {fileID: 114102676635019036, guid: 0fb6c38d76a419e4f8614d712e53759c,
+        type: 2}
+      propertyPath: m_FirstContact
+      value: 
+      objectReference: {fileID: 796927609}
+    - target: {fileID: 114102676635019036, guid: 0fb6c38d76a419e4f8614d712e53759c,
+        type: 2}
+      propertyPath: m_FirstContactMoodName
+      value: Trading
+      objectReference: {fileID: 0}
+    - target: {fileID: 114102676635019036, guid: 0fb6c38d76a419e4f8614d712e53759c,
+        type: 2}
+      propertyPath: m_FirstContactMoodValue
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0fb6c38d76a419e4f8614d712e53759c, type: 2}
   m_IsPrefabParent: 0
@@ -713,6 +728,11 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 621007711}
+--- !u!1 &796927609 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1432817161559806, guid: 0fb6c38d76a419e4f8614d712e53759c,
+    type: 2}
+  m_PrefabInternal: {fileID: 174387484}
 --- !u!4 &821884952 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4742240981259356, guid: aa6c5c89fbb50cb4da4dbbdbec9dfc96,
