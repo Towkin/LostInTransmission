@@ -5,56 +5,111 @@ using System.Linq;
 using System.Text;
 using UnityEngine;
 
-public class MessageQuery : MonoBehaviour {
+public class MessageQuery {
 
     private TranslateMessageData m_Data;
-    public TranslateMessageData Data { get { return m_Data; } }
+    public TranslateMessageData Data {
+        get { return m_Data; }
+    }
 
     public void SetData(TranslateMessageData newData)
     {
-        m_StringParts = newData.Text.Split(new char[] { '[', ']' });
-        List<int> optionIndices = new List<int>();
+        m_Data = newData;
 
-        for (int i = 0; i < m_StringParts.Count(); i++)
+        var strings = Data.Text.Split(new char[] { '[', ']' });
+        m_MessageParts = new MessagePart[strings.Count()];
+        for (int i = 0; i < strings.Count(); i++)
+            m_MessageParts[i] = new MessagePart(strings[i]);
+        
+        for (int i = 0; i < m_MessageParts.Count(); i++)
         {
-            for(int j = 0; j < newData.OptionSet.Count(); j++)
+            for(int j = 0; j < Data.OptionSet.Count(); j++)
             {
-                if(m_StringParts[i] == newData.OptionSet[j].Name)
+                if(m_MessageParts[i].Text == Data.OptionSet[j].Name)
                 {
-                    m_StringParts[i] = null;
-                    optionIndices.Add(j);
+                    if (Data.OptionSet[j].Options.Count() < 2)
+                        break;
+
+                    m_MessageParts[i] = new MessagePart(j);
                     break;
                 }
             }
         }
+    }
+    
+    public class MessagePart
+    {
+        public MessagePart(string text)
+        {
+            m_Text = text;
+        }
 
-        m_OptionSetIndices = optionIndices.ToArray();
-        m_CurrentOptionIndices = new int[m_OptionSetIndices.Count()];
+        public MessagePart(int optionSet)
+        {
+            m_OptionSetIndex = optionSet;
+            m_CurrentOption = 0;
+            m_Dirty = true;
+        }
+
+        public void Update(ref TranslateMessageData.TranslateOptionSet[] optionSet)
+        {
+            if (m_Dirty)
+                m_Text = optionSet[m_OptionSetIndex].Options[CurrentOption].Text;
+        }
+
+        string m_Text;
+        int m_OptionSetIndex = -1;
+        int m_CurrentOption = 0;
+        bool m_Dirty = false;
+
+        public string Text
+        {
+            get { return m_Text; }
+        }
+        public int OptionsSetIndex { get { return m_OptionSetIndex; } }
+        public int CurrentOption
+        {
+            get { return m_CurrentOption; } 
+            set
+            {
+                if (m_OptionSetIndex == -1)
+                    return;
+
+                m_Dirty = true;
+                m_CurrentOption = value;
+            }
+        }
+        
+        public bool IsOption { get { return m_OptionSetIndex >= 0; } }
+    }
+    
+    MessagePart[] m_MessageParts;
+
+    public TranslateMessageData.TranslateOptionSet GetOptionSet(MessagePart part)
+    {
+        return Data.OptionSet[part.OptionsSetIndex];
     }
 
-    string[] m_StringParts;
-    int[] m_OptionSetIndices;
-    int[] m_CurrentOptionIndices;
-    
-    public string Text
+    public MessagePart[] MessageText
     {
         get
         {
-            StringBuilder builder = new StringBuilder();
-            int partIndex = 0;
-            foreach (var part in m_StringParts)
-            {
-                if (part == null)
-                {
-                    builder.Append(Data.OptionSet[m_OptionSetIndices[partIndex]].Options[m_CurrentOptionIndices[partIndex]].Text);
-                    partIndex++;
-                }
-                else
-                {
-                    builder.Append(part);
-                }
-            }
-            return builder.ToString();
+            foreach(var part in m_MessageParts)
+                part.Update(ref m_Data.OptionSet);
+
+            return m_MessageParts;
+        }
+    }
+    public MessagePart[] MessageOptions
+    {
+        get
+        {
+            List<MessagePart> options = new List<MessagePart>();
+            foreach (var part in m_MessageParts)
+                if (part.IsOption)
+                    options.Add(part);
+
+            return options.ToArray();
         }
     }
 }

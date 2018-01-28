@@ -7,24 +7,24 @@ using System.IO;
 
 
 [Serializable]
-public struct MoodModifier
+public class MoodModifier
 {
     public string Name;
     public float Modification;
 }
 
 [Serializable]
-public struct TranslateMessageData
+public class TranslateMessageData
 {
     [Serializable]
-    public struct TranslateOption
+    public class TranslateOption
     {
         public string Text;
         public MoodModifier[] MoodSet;
     }
 
     [Serializable]
-    public struct TranslateOptionSet
+    public class TranslateOptionSet
     {
         public string Name;
         public TranslateOption[] Options;
@@ -98,7 +98,7 @@ public class TranslateMessageDataLister
 public class MessageDatabase : MonoBehaviour
 {
     [ContextMenuItem("Load Database", "LoadDb")]
-    public string DatabaseFilePath;
+    public UnityEngine.Object Database;
     [SerializeField]
     private TranslateMessageData[] m_Messages;
     public TranslateMessageData[] Messages { get { return m_Messages; } }
@@ -118,39 +118,46 @@ public class MessageDatabase : MonoBehaviour
     public void LoadDb()
     {
         List<TranslateMessageDataLister> messages = new List<TranslateMessageDataLister>();
-        using (var reader = new StreamReader(DatabaseFilePath))
+        using (var reader = new StreamReader(AssetDatabase.GetAssetPath(Database)))
         {
-            while(!reader.EndOfStream)
+            while (!reader.EndOfStream)
             {
                 string[] columns = reader.ReadLine().Split('\t');
                 if (columns.Length != 5)
                 {
-                    Debug.LogWarning("A line in the file '" + DatabaseFilePath + "' didn't contain 5 columns!");
+                    Debug.LogWarning("A line in the file '" + Database + "' didn't contain 5 columns!");
                     continue;
                 }
 
-                if(!String.IsNullOrEmpty(columns[(int)DatabaseColumn.MessageText]))
+                if (!String.IsNullOrEmpty(columns[(int)DatabaseColumn.MessageText]))
                 {
                     // Skip the entire line if it has the column name.
                     if (columns[(int)DatabaseColumn.MessageText] == "MessageText")
                         continue;
-
-                    
+                    var s = "";
+                    bool inBracket = false;
+                    foreach (var t in columns[(int)DatabaseColumn.MessageText])
+                    {
+                        if (t == '[') inBracket = true;
+                        if (t == ']') inBracket = false;
+                        if (inBracket && t == ' ') s += "_";
+                        else s += t;
+                    }
                     messages.Add(new TranslateMessageDataLister
                     {
-                        Text = columns[(int)DatabaseColumn.MessageText]
+                        Text = s
                     });
                 }
 
                 var currentMessage = messages.LastOrDefault();
                 if (currentMessage == null)
                     continue;
-                
+
                 if (!String.IsNullOrEmpty(columns[(int)DatabaseColumn.OptionKey]))
                 {
                     currentMessage.OptionSet.Add(new TranslateMessageDataLister.TranslateOptionSet()
                     {
-                        Name = columns[(int)DatabaseColumn.OptionKey]
+                        Name = columns[(int)DatabaseColumn.OptionKey].Replace(' ', '_')
                     });
                 }
 
@@ -167,8 +174,8 @@ public class MessageDatabase : MonoBehaviour
                 var currentMoodModifiers = currentOptionSet != null && currentOptionSet.Options.Count > 0 ?
                     currentOptionSet.Options[currentOptionSet.Options.Count - 1].MoodSet :
                     currentMessage.MoodSet;
-                
-                if(!String.IsNullOrEmpty(columns[(int)DatabaseColumn.OptionMoodKey]) &&
+
+                if (!String.IsNullOrEmpty(columns[(int)DatabaseColumn.OptionMoodKey]) &&
                     !String.IsNullOrEmpty(columns[(int)DatabaseColumn.OptionMoodValue]))
                 {
                     currentMoodModifiers.Add(new MoodModifier()
