@@ -190,10 +190,13 @@ public class MessageDatabase : MonoBehaviour
         for (int i = 0; i < messages.Count; i++)
         {
             TranslateMessageDataLister output = messages[i];
-
-            m_Messages[i].Text = output.Text;
-            m_Messages[i].MoodSet = output.MoodSet.ToArray();
-            m_Messages[i].OptionSet = new TranslateMessageData.TranslateOptionSet[output.OptionSet.Count];
+            m_Messages[i] = new TranslateMessageData()
+            {
+                Text = output.Text,
+                MoodSet = output.MoodSet.ToArray(),
+                OptionSet = new TranslateMessageData.TranslateOptionSet[output.OptionSet.Count]
+            };
+            
             for (int j = 0; j < output.OptionSet.Count; j++)
             {
                 // Note: Implicit conversion.

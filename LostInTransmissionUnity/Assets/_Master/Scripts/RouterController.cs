@@ -10,7 +10,11 @@ public class RouterController : MonoBehaviour {
 
     [SerializeField]
     GameObject m_OptionDropdownTemplate;
-    
+
+    [SerializeField]
+    Color m_OptionTextColor = Color.grey;
+    [SerializeField]
+    float m_OptionTextPadding = 8;
 
     List<string> m_History;
     List<MessageQuery> m_BackLog = new List<MessageQuery>();
@@ -65,10 +69,12 @@ public class RouterController : MonoBehaviour {
 
     void CreateOptionsDropdown(RectTransform parentRect, TranslateMessageData.TranslateOptionSet optionSet, int optionSetIndex)
     {
-        var setParent = new GameObject(optionSet.Name + " options");
-        setParent.transform.SetParent(parentRect.parent);
-        parentRect.GetComponent<UnityEngine.UI.Button>().onClick.AddListener(setParent.AddComponent<MessageOptionDropdown>().Activate);
-        m_DropdownOptions.Add(setParent);
+        var optionSetList = new GameObject(optionSet.Name + " options");
+        optionSetList.transform.SetParent(parentRect.parent);
+        var optionSetTransform = optionSetList.AddComponent<RectTransform>();
+        optionSetTransform.position = parentRect.position;
+        parentRect.GetComponent<UnityEngine.UI.Button>().onClick.AddListener(optionSetList.AddComponent<MessageOptionDropdown>().Activate);
+        m_DropdownOptions.Add(optionSetList);
 
         for (int i = 0; i < optionSet.Options.Length; i++)
         {
@@ -79,9 +85,9 @@ public class RouterController : MonoBehaviour {
             dropdownItem.GetComponent<MessageOptionDropdownItem>().m_Router = this;
             dropdownItem.transform.position = parentRect.position + new Vector3(0, -dropdownItem.GetComponent<RectTransform>().rect.height * (i + 1));
 
-            dropdownItem.transform.SetParent(setParent.transform);
+            dropdownItem.transform.SetParent(optionSetList.transform);
         }
-        setParent.SetActive(false);
+        optionSetList.SetActive(false);
     }
 
     IEnumerator BuildButtons(List<OptionButtonBuilder> optionsBuilderList, TranslateMessageData.TranslateOptionSet[] optionSets)
@@ -121,13 +127,13 @@ public class RouterController : MonoBehaviour {
                 var rectTransform = buttonObject.AddComponent<RectTransform>();
                 rectTransform.transform.position = m_Text.transform.position + new Vector3(
                     buttonSize.position.x + buttonSize.length / 2,
-                    buttonSize.position.y - m_Text.fontSize / 2);
-                rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, buttonSize.length);
-                rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, m_Text.fontSize);
+                    buttonSize.position.y - m_Text.fontSize / 2 - m_OptionTextPadding / 4);
+                rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, buttonSize.length + m_OptionTextPadding);
+                rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, m_Text.fontSize + m_OptionTextPadding);
 
                 var button = buttonObject.AddComponent<UnityEngine.UI.Button>();
                 var image = buttonObject.AddComponent<UnityEngine.UI.Image>();
-                image.color = Color.cyan;
+                image.color = m_OptionTextColor;
                 button.targetGraphic = image;
                 
                 m_Buttons.Add(buttonObject);

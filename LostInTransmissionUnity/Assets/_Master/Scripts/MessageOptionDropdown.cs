@@ -22,12 +22,14 @@ public class MessageOptionDropdown : MonoBehaviour {
             rect.offsetMin = Vector2.zero;
             rect.offsetMax = Vector2.zero;
 
+            rect.localScale = Vector3.one * 1000.0f;
+            
             var blockButton = blocker.AddComponent<UnityEngine.UI.Button>();
             blockButton.onClick.AddListener(Deactivate);
 
             var image = blocker.AddComponent<UnityEngine.UI.Image>();
             blockButton.targetGraphic = image;
-            image.color = new Color(0, 0, 0, 0.05f);
+            image.color = new Color(0, 0, 0, 0.0f);
         }
 
         blocker.transform.SetSiblingIndex(1000);

@@ -122,6 +122,7 @@ GameObject:
   - component: {fileID: 108645417}
   - component: {fileID: 108645419}
   - component: {fileID: 108645418}
+  - component: {fileID: 108645420}
   m_Layer: 5
   m_Name: TranslationText
   m_TagString: Untagged
@@ -136,16 +137,16 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 108645416}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -365, y: 50, z: 0}
+  m_LocalPosition: {x: -370, y: 40, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 915917416}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 750, y: 280}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 10, y: -10}
+  m_SizeDelta: {x: -20, y: -20}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &108645418
 MonoBehaviour:
@@ -155,7 +156,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 108645416}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1453722849, guid: 89f0137620f6af44b9ba852b4190e64e, type: 3}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
@@ -166,107 +167,37 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: 'We have decided that allowing you to colonize this world is beneficial
-    for us both. '
-  m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: d00fa3e57f7063e43855bc28aa96223a, type: 2}
-  m_sharedMaterial: {fileID: 21219206896250376, guid: d00fa3e57f7063e43855bc28aa96223a,
-    type: 2}
-  m_fontSharedMaterials: []
-  m_fontMaterial: {fileID: 0}
-  m_fontMaterials: []
-  m_fontColor32:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
-  m_enableVertexGradient: 0
-  m_fontColorGradient:
-    topLeft: {r: 1, g: 1, b: 1, a: 1}
-    topRight: {r: 1, g: 1, b: 1, a: 1}
-    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
-    bottomRight: {r: 1, g: 1, b: 1, a: 1}
-  m_fontColorGradientPreset: {fileID: 0}
-  m_spriteAsset: {fileID: 0}
-  m_tintAllSprites: 0
-  m_overrideHtmlColors: 0
-  m_faceColor:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_outlineColor:
-    serializedVersion: 2
-    rgba: 4278190080
-  m_fontSize: 22
-  m_fontSizeBase: 22
-  m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
-  m_fontStyle: 1
-  m_textAlignment: 257
-  m_isAlignmentEnumConverted: 1
-  m_characterSpacing: 0
-  m_wordSpacing: 0
-  m_lineSpacing: 0
-  m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
-  m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
-  m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
-  m_firstOverflowCharacterIndex: -1
-  m_linkedTextComponent: {fileID: 0}
-  m_isLinkedTextComponent: 0
-  m_enableKerning: 1
-  m_enableExtraPadding: 1
-  checkPaddingRequired: 0
-  m_isRichText: 1
-  m_parseCtrlCharacters: 1
-  m_isOrthographic: 1
-  m_isCullingEnabled: 0
-  m_ignoreRectMaskCulling: 0
-  m_ignoreCulling: 1
-  m_horizontalMapping: 0
-  m_verticalMapping: 0
-  m_uvLineOffset: 0
-  m_geometrySortingOrder: 0
-  m_firstVisibleCharacter: 0
-  m_useMaxVisibleDescender: 1
-  m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
-  m_textInfo:
-    textComponent: {fileID: 108645418}
-    characterCount: 84
-    spriteCount: 0
-    spaceCount: 15
-    wordCount: 15
-    linkCount: 0
-    lineCount: 2
-    pageCount: 1
-    materialCount: 1
-  m_havePropertiesChanged: 0
-  m_isUsingLegacyAnimationComponent: 0
-  m_isVolumetricText: 0
-  m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 0
-  m_inputSource: 0
-  m_hasFontAssetChanged: 0
-  m_subTextObjects:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  m_baseMaterial: {fileID: 0}
-  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 44550093c0de32f458f0e7bfe20a5e7b, type: 3}
+    m_FontSize: 22
+    m_FontStyle: 1
+    m_BestFit: 0
+    m_MinSize: 2
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 'This bing is needed for us to harvest bings. Wing-wong-bing. '
 --- !u!222 &108645419
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 108645416}
+--- !u!225 &108645420
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 108645416}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 0
+  m_IgnoreParentGroups: 0
 --- !u!1 &252973509
 GameObject:
   m_ObjectHideFlags: 0
@@ -347,6 +278,473 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &318696713
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 318696715}
+  - component: {fileID: 318696714}
+  - component: {fileID: 318696716}
+  m_Layer: 0
+  m_Name: Router
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &318696714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 318696713}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a3f67aabdaf7df48b736021c2620a5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Text: {fileID: 108645418}
+  m_OptionDropdownTemplate: {fileID: 1454386949057856, guid: 019a27f7c7854aa40b11f575dccc7abf,
+    type: 2}
+  m_OptionTextColor: {r: 0.41079152, g: 0.9632353, b: 0.62033916, a: 0.528}
+  m_OptionTextPadding: 6
+--- !u!4 &318696715
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 318696713}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &318696716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 318696713}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e651f5a743a2484da4cb581c62a08dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Database: {fileID: 102900000, guid: 9928a3177fd8e3245a734594cf749a04, type: 3}
+  m_Messages:
+  - Text: '[Whoop]! Beautiful, [roro_pofooie]! -Trade Empire'
+    MoodSet: []
+    OptionSet:
+    - Name: Whoop
+      Options:
+      - Text: Selling
+        MoodSet:
+        - Name: Trading
+          Modification: 5
+      - Text: Negotiation
+        MoodSet:
+        - Name: Trading
+          Modification: 1
+      - Text: Look
+        MoodSet:
+        - Name: Trading
+          Modification: 1
+    - Name: roro_pofooie
+      Options:
+      - Text: rare fur
+        MoodSet:
+        - Name: 'Friendly '
+          Modification: 1
+      - Text: limited fluff
+        MoodSet:
+        - Name: Confusing
+          Modification: 1
+      - Text: extinct animal
+        MoodSet:
+        - Name: Friendly
+          Modification: -3
+  - Text: Regarding the [eooik] in the East part of the universe. We are sending out
+      [uupopop] as soon as possible.
+    MoodSet: []
+    OptionSet:
+    - Name: eooik
+      Options:
+      - Text: starvation
+        MoodSet:
+        - Name: Friendly
+          Modification: 2
+      - Text: weight-reduction plan
+        MoodSet:
+        - Name: Friendly
+          Modification: -5
+      - Text: regimen
+        MoodSet:
+        - Name: Confusing
+          Modification: 2
+    - Name: uupopop
+      Options:
+      - Text: food supplies
+        MoodSet:
+        - Name: Friendly
+          Modification: 1
+      - Text: office supplies
+        MoodSet:
+        - Name: Friendly
+          Modification: -1
+      - Text: whatchamacallit
+        MoodSet:
+        - Name: Confusing
+          Modification: 1
+  - Text: If this [smolp] [nnopg] continues, there will be [qp].
+    MoodSet: []
+    OptionSet:
+    - Name: smolp
+      Options:
+      - Text: childish
+        MoodSet:
+        - Name: Friendly
+          Modification: -1
+      - Text: innocuous
+        MoodSet:
+        - Name: Confusing
+          Modification: 1
+      - Text: sterile
+        MoodSet:
+        - Name: Confusing
+          Modification: 1
+    - Name: nnopg
+      Options:
+      - Text: name calling
+        MoodSet:
+        - Name: Friendly
+          Modification: -1
+      - Text: alias derogate
+        MoodSet:
+        - Name: Friendly
+          Modification: -1
+      - Text: nomenclature
+        MoodSet:
+        - Name: Confusing
+          Modification: 1
+    - Name: qp
+      Options:
+      - Text: consequences
+        MoodSet:
+        - Name: Friendly
+          Modification: -1
+      - Text: a sequel
+        MoodSet:
+        - Name: Confusing
+          Modification: 3
+      - Text: a morass
+        MoodSet:
+        - Name: Confusing
+          Modification: 1
+  - Text: We are glad that the [orkp] could be solved in a [cuop_noym]. [Iiiol_oill]
+      for everyone.
+    MoodSet: []
+    OptionSet:
+    - Name: orkp
+      Options:
+      - Text: conflict
+        MoodSet:
+        - Name: Friendly
+          Modification: 2
+      - Text: battle royal
+        MoodSet:
+        - Name: Friendly
+          Modification: -1
+      - Text: shindig
+        MoodSet:
+        - Name: Confusing
+          Modification: 1
+    - Name: cuop_noym
+      Options:
+      - Text: civilized manner
+        MoodSet:
+        - Name: Friendly
+          Modification: 2
+      - Text: laid-back surrender
+        MoodSet:
+        - Name: Confusing
+          Modification: 1
+      - Text: idiosyncrasy traits
+        MoodSet:
+        - Name: Friendly
+          Modification: -2
+    - Name: Iiiol_oill
+      Options:
+      - Text: Ice cream
+        MoodSet:
+        - Name: Friendly
+          Modification: 5
+      - Text: Cold milk
+        MoodSet:
+        - Name: Confusing
+          Modification: 1
+      - Text: Permafrost
+        MoodSet:
+        - Name: Friendly
+          Modification: -4
+  - Text: The great Trade Empire [hupo] [rootr].
+    MoodSet: []
+    OptionSet:
+    - Name: hupo
+      Options:
+      - Text: declares
+        MoodSet:
+        - Name: Friendly
+          Modification: -3
+      - Text: swears
+        MoodSet:
+        - Name: Friendly
+          Modification: -3
+      - Text: curses
+        MoodSet:
+        - Name: Friendly
+          Modification: 5
+    - Name: rootr
+      Options:
+      - Text: war
+        MoodSet:
+        - Name: Friendly
+          Modification: -5
+      - Text: Inconvinience
+        MoodSet:
+        - Name: Confusing
+          Modification: 3
+      - Text: Trade oppurtunity
+        MoodSet:
+        - Name: Trading
+          Modification: 5
+  - Text: We [oowip] [op_op] to [ropp_opopooo] in our universe.
+    MoodSet: []
+    OptionSet:
+    - Name: oowip
+      Options:
+      - Text: plead
+        MoodSet:
+        - Name: Friendly
+          Modification: 4
+      - Text: crawl
+        MoodSet:
+        - Name: Friendly
+          Modification: 1
+      - Text: deign
+        MoodSet:
+        - Name: Friendly
+          Modification: -2
+    - Name: op_op
+      Options:
+      - Text: an alliance
+        MoodSet:
+        - Name: Friendly
+          Modification: 4
+      - Text: a marriage
+        MoodSet:
+        - Name: Confusing
+          Modification: 2
+      - Text: a blood bond
+        MoodSet:
+        - Name: Confusing
+          Modification: 2
+    - Name: ropp_opopooo
+      Options:
+      - Text: keep the peace
+        MoodSet:
+        - Name: Friendly
+          Modification: 3
+      - Text: hold the privilege
+        MoodSet:
+        - Name: Friendly
+          Modification: -3
+      - Text: grip the love
+        MoodSet:
+        - Name: Confusing
+          Modification: 3
+  - Text: Do you agree to our [opopooo] terms?
+    MoodSet: []
+    OptionSet:
+    - Name: opopooo
+      Options:
+      - Text: peace
+        MoodSet:
+        - Name: Friendly
+          Modification: 4
+      - Text: privilege
+        MoodSet:
+        - Name: Friendly
+          Modification: -4
+      - Text: love
+        MoodSet:
+        - Name: Confusing
+          Modification: 3
+  - Text: Do you have any [arorwp] to our [uu_uu] letter?
+    MoodSet: []
+    OptionSet:
+    - Name: arorwp
+      Options:
+      - Text: answer
+        MoodSet:
+        - Name: Friendly
+          Modification: 3
+      - Text: rebuttal
+        MoodSet:
+        - Name: Friendly
+          Modification: -1
+      - Text: defense
+        MoodSet:
+        - Name: Friendly
+          Modification: 2
+    - Name: uu_uu
+      Options:
+      - Text: unity
+        MoodSet:
+        - Name: Friendly
+          Modification: 2
+      - Text: fusion
+        MoodSet:
+        - Name: Friendly
+          Modification: -2
+      - Text: mixer
+        MoodSet:
+        - Name: Confusing
+          Modification: 3
+  - Text: We are [aoaoaoa] to see that the [uu_up] of the universe is a priority.
+    MoodSet: []
+    OptionSet:
+    - Name: aoaoaoa
+      Options:
+      - Text: delighted
+        MoodSet:
+        - Name: Friendly
+          Modification: 3
+      - Text: in the twilight zone
+        MoodSet:
+        - Name: Friendly
+          Modification: -3
+      - Text: floating
+        MoodSet:
+        - Name: Confusing
+          Modification: 3
+    - Name: uu_up
+      Options:
+      - Text: union
+        MoodSet:
+        - Name: Friendly
+          Modification: 1
+      - Text: hook-up
+        MoodSet:
+        - Name: Confusing
+          Modification: 1
+      - Text: network
+        MoodSet:
+        - Name: Trading
+          Modification: 1
+  - Text: We are [co] by the fact that you seek [aosadfpg].
+    MoodSet: []
+    OptionSet:
+    - Name: co
+      Options:
+      - Text: saddened
+        MoodSet:
+        - Name: Friendly
+          Modification: 2
+      - Text: not complaining
+        MoodSet:
+        - Name: Friendly
+          Modification: -4
+      - Text: heartbroken
+        MoodSet:
+        - Name: Confusing
+          Modification: 3
+    - Name: aosadfpg
+      Options:
+      - Text: chaos
+        MoodSet:
+        - Name: Friendly
+          Modification: 1
+      - Text: topsy-turviness
+        MoodSet:
+        - Name: Confusing
+          Modification: -2
+      - Text: anarchy
+        MoodSet:
+        - Name: Friendly
+          Modification: -1
+  - Text: '[Orpo_hue_tomm_p_o_p]?'
+    MoodSet: []
+    OptionSet:
+    - Name: Orpo_hue_tomm_p_o_p
+      Options:
+      - Text: Who wants to trade
+        MoodSet:
+        - Name: Trading
+          Modification: 5
+      - Text: Swiping and swaping anybody
+        MoodSet:
+        - Name: Trading
+          Modification: 3
+      - Text: Let us argue
+        MoodSet:
+        - Name: Friendly
+          Modification: -2
+  - Text: '[Opi_dopi].'
+    MoodSet: []
+    OptionSet:
+    - Name: Opi_dopi
+      Options:
+      - Text: We accept
+        MoodSet:
+        - Name: Trading
+          Modification: 2
+      - Text: Gospel truth
+        MoodSet:
+        - Name: Friendly
+          Modification: 4
+      - Text: We swallow
+        MoodSet:
+        - Name: Confusing
+          Modification: 3
+  - Text: '[Opi_ooo].'
+    MoodSet: []
+    OptionSet:
+    - Name: Opi_ooo
+      Options:
+      - Text: We decline
+        MoodSet:
+        - Name: Friendly
+          Modification: 2
+      - Text: We defeat
+        MoodSet:
+        - Name: Friendly
+          Modification: -2
+      - Text: Belly flop
+        MoodSet:
+        - Name: Confusing
+          Modification: 2
+  - Text: '[Toffp].'
+    MoodSet: []
+    OptionSet:
+    - Name: Toffp
+      Options:
+      - Text: The deal is off
+        MoodSet:
+        - Name: Trading
+          Modification: -2
+      - Text: You broke it
+        MoodSet:
+        - Name: Confusing
+          Modification: 1
+      - Text: Cheapskate
+        MoodSet:
+        - Name: Friendly
+          Modification: -2
 --- !u!1 &565831240
 GameObject:
   m_ObjectHideFlags: 0
@@ -439,16 +837,16 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 621007711}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 15, y: 0, z: 0}
+  m_LocalPosition: {x: 10, y: -10, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2123448226}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 735, y: 191.9}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 10, y: -10}
+  m_SizeDelta: {x: -20, y: -20}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &621007713
 MonoBehaviour:
@@ -458,7 +856,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 621007711}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1453722849, guid: 89f0137620f6af44b9ba852b4190e64e, type: 3}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
@@ -469,101 +867,21 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: Noot-noot! A few of us have lost our ell-ell due to some u-uish with the
-    Xenophobes. We wonder if you have fa ell-ell we can buy from you? Er-er regards,
-    the Pod-Pods.
-  m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: d00fa3e57f7063e43855bc28aa96223a, type: 2}
-  m_sharedMaterial: {fileID: 2106225654}
-  m_fontSharedMaterials: []
-  m_fontMaterial: {fileID: 2106225654}
-  m_fontMaterials: []
-  m_fontColor32:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
-  m_enableVertexGradient: 0
-  m_fontColorGradient:
-    topLeft: {r: 1, g: 1, b: 1, a: 1}
-    topRight: {r: 1, g: 1, b: 1, a: 1}
-    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
-    bottomRight: {r: 1, g: 1, b: 1, a: 1}
-  m_fontColorGradientPreset: {fileID: 0}
-  m_spriteAsset: {fileID: 0}
-  m_tintAllSprites: 0
-  m_overrideHtmlColors: 0
-  m_faceColor:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_outlineColor:
-    serializedVersion: 2
-    rgba: 4278190080
-  m_fontSize: 22
-  m_fontSizeBase: 22
-  m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
-  m_fontStyle: 1
-  m_textAlignment: 257
-  m_isAlignmentEnumConverted: 1
-  m_characterSpacing: 0
-  m_wordSpacing: 0
-  m_lineSpacing: 0
-  m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
-  m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
-  m_wordWrappingRatios: 0.4
-  m_overflowMode: 4
-  m_firstOverflowCharacterIndex: -1
-  m_linkedTextComponent: {fileID: 0}
-  m_isLinkedTextComponent: 0
-  m_enableKerning: 1
-  m_enableExtraPadding: 1
-  checkPaddingRequired: 0
-  m_isRichText: 1
-  m_parseCtrlCharacters: 1
-  m_isOrthographic: 1
-  m_isCullingEnabled: 0
-  m_ignoreRectMaskCulling: 0
-  m_ignoreCulling: 1
-  m_horizontalMapping: 0
-  m_verticalMapping: 0
-  m_uvLineOffset: 0
-  m_geometrySortingOrder: 0
-  m_firstVisibleCharacter: 0
-  m_useMaxVisibleDescender: 1
-  m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
-  m_textInfo:
-    textComponent: {fileID: 621007713}
-    characterCount: 167
-    spriteCount: 0
-    spaceCount: 31
-    wordCount: 32
-    linkCount: 0
-    lineCount: 3
-    pageCount: 1
-    materialCount: 1
-  m_havePropertiesChanged: 0
-  m_isUsingLegacyAnimationComponent: 0
-  m_isVolumetricText: 0
-  m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 0
-  m_inputSource: 0
-  m_hasFontAssetChanged: 0
-  m_subTextObjects:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  m_baseMaterial: {fileID: 0}
-  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 44550093c0de32f458f0e7bfe20a5e7b, type: 3}
+    m_FontSize: 22
+    m_FontStyle: 1
+    m_BestFit: 0
+    m_MinSize: 2
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: All beep-beep are welcome to enjoy the bo-pleep of the wiir. Enjoy the bleep
+    exhibition at robot bing!
 --- !u!222 &621007714
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -580,7 +898,6 @@ GameObject:
   - component: {fileID: 915917416}
   - component: {fileID: 915917418}
   - component: {fileID: 915917417}
-  - component: {fileID: 915917419}
   m_Layer: 5
   m_Name: TranslationTextBackground
   m_TagString: Untagged
@@ -640,28 +957,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 915917415}
---- !u!114 &915917419
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 915917415}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1297475563, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Padding:
-    m_Left: 15
-    m_Right: 10
-    m_Top: 0
-    m_Bottom: 10
-  m_ChildAlignment: 0
-  m_Spacing: 0
-  m_ChildForceExpandWidth: 1
-  m_ChildForceExpandHeight: 1
-  m_ChildControlWidth: 1
-  m_ChildControlHeight: 1
 --- !u!1 &919703563
 GameObject:
   m_ObjectHideFlags: 0
@@ -673,6 +968,7 @@ GameObject:
   - component: {fileID: 919703566}
   - component: {fileID: 919703565}
   - component: {fileID: 919703567}
+  - component: {fileID: 919703568}
   m_Layer: 5
   m_Name: DialogueBackground
   m_TagString: Untagged
@@ -753,6 +1049,17 @@ MonoBehaviour:
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 0
   m_ChildControlHeight: 1
+--- !u!225 &919703568
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 919703563}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 0
+  m_IgnoreParentGroups: 0
 --- !u!1 &1215079388
 GameObject:
   m_ObjectHideFlags: 0
@@ -888,7 +1195,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1386927541}
-  - component: {fileID: 1386927542}
   m_Layer: 5
   m_Name: Dialogue
   m_TagString: Untagged
@@ -903,7 +1209,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1386927540}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -297.96063, z: 0}
+  m_LocalPosition: {x: 0, y: -304.52594, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1662442078}
@@ -915,20 +1221,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -10}
   m_SizeDelta: {x: 1100, y: 380}
   m_Pivot: {x: 0.5, y: 0}
---- !u!225 &1386927542
-CanvasGroup:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1386927540}
-  m_Enabled: 1
-  m_Alpha: 1
-  m_Interactable: 1
-  m_BlocksRaycasts: 0
-  m_IgnoreParentGroups: 0
 --- !u!1 &1421256809
 GameObject:
   m_ObjectHideFlags: 0
@@ -941,6 +1236,7 @@ GameObject:
   - component: {fileID: 1421256811}
   - component: {fileID: 1421256813}
   - component: {fileID: 1421256814}
+  - component: {fileID: 1421256815}
   m_Layer: 5
   m_Name: Backlog
   m_TagString: Untagged
@@ -955,7 +1251,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1421256809}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -527.28064, z: 0}
+  m_LocalPosition: {x: 0, y: -523.84595, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1896171968}
@@ -1027,6 +1323,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b852e0f79efdcc34f95aaee617a1df44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1421256815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1421256809}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: 
+  PlayEvent: 0
+  StopEvent: 0
+  CollisionTag: 
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: -1
+  OverrideMaxDistance: -1
 --- !u!1 &1662442077
 GameObject:
   m_ObjectHideFlags: 0
@@ -1149,7 +1467,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 2
+  m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 0.7173443, g: 0.81522495, b: 0.9117647, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -1250,7 +1568,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1767875898}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1453722849, guid: 89f0137620f6af44b9ba852b4190e64e, type: 3}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
@@ -1261,102 +1579,20 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: 'Send
-
-'
-  m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: d00fa3e57f7063e43855bc28aa96223a, type: 2}
-  m_sharedMaterial: {fileID: 21219206896250376, guid: d00fa3e57f7063e43855bc28aa96223a,
-    type: 2}
-  m_fontSharedMaterials: []
-  m_fontMaterial: {fileID: 0}
-  m_fontMaterials: []
-  m_fontColor32:
-    serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
-  m_enableVertexGradient: 0
-  m_fontColorGradient:
-    topLeft: {r: 1, g: 1, b: 1, a: 1}
-    topRight: {r: 1, g: 1, b: 1, a: 1}
-    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
-    bottomRight: {r: 1, g: 1, b: 1, a: 1}
-  m_fontColorGradientPreset: {fileID: 0}
-  m_spriteAsset: {fileID: 0}
-  m_tintAllSprites: 0
-  m_overrideHtmlColors: 0
-  m_faceColor:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_outlineColor:
-    serializedVersion: 2
-    rgba: 4278190080
-  m_fontSize: 24
-  m_fontSizeBase: 24
-  m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
-  m_fontStyle: 0
-  m_textAlignment: 514
-  m_isAlignmentEnumConverted: 1
-  m_characterSpacing: 0
-  m_wordSpacing: 0
-  m_lineSpacing: 0
-  m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
-  m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
-  m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
-  m_firstOverflowCharacterIndex: -1
-  m_linkedTextComponent: {fileID: 0}
-  m_isLinkedTextComponent: 0
-  m_enableKerning: 1
-  m_enableExtraPadding: 1
-  checkPaddingRequired: 0
-  m_isRichText: 1
-  m_parseCtrlCharacters: 1
-  m_isOrthographic: 1
-  m_isCullingEnabled: 0
-  m_ignoreRectMaskCulling: 0
-  m_ignoreCulling: 1
-  m_horizontalMapping: 0
-  m_verticalMapping: 0
-  m_uvLineOffset: 0
-  m_geometrySortingOrder: 0
-  m_firstVisibleCharacter: 0
-  m_useMaxVisibleDescender: 1
-  m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
-  m_textInfo:
-    textComponent: {fileID: 1767875900}
-    characterCount: 5
-    spriteCount: 0
-    spaceCount: 1
-    wordCount: 1
-    linkCount: 0
-    lineCount: 1
-    pageCount: 1
-    materialCount: 1
-  m_havePropertiesChanged: 0
-  m_isUsingLegacyAnimationComponent: 0
-  m_isVolumetricText: 0
-  m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 0
-  m_inputSource: 0
-  m_hasFontAssetChanged: 0
-  m_subTextObjects:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  m_baseMaterial: {fileID: 0}
-  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 44550093c0de32f458f0e7bfe20a5e7b, type: 3}
+    m_FontSize: 22
+    m_FontStyle: 1
+    m_BestFit: 0
+    m_MinSize: 2
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Send
 --- !u!222 &1767875901
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1445,7 +1681,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1896171964}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 559, y: 173.5, z: 0}
+  m_LocalPosition: {x: 559, y: 171.5, z: 0}
   m_LocalScale: {x: 0.58229166, y: 0.58229166, z: 0.58229166}
   m_Children:
   - {fileID: 565831241}
@@ -1459,106 +1695,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!21 &2106225654
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: GOTHIC SDF Material (Instance)
-  m_Shader: {fileID: 4800000, guid: dca26082f9cb439469295791d9f76fe5, type: 3}
-  m_ShaderKeywords: MASK_SOFT
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _BumpMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Cube:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _FaceTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MainTex:
-        m_Texture: {fileID: 28762176728538400, guid: d00fa3e57f7063e43855bc28aa96223a,
-          type: 2}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _OutlineTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats:
-    - _Ambient: 0.5
-    - _Bevel: 0.5
-    - _BevelClamp: 0
-    - _BevelOffset: 0
-    - _BevelRoundness: 0
-    - _BevelWidth: 0
-    - _BumpFace: 0
-    - _BumpOutline: 0
-    - _ColorMask: 15
-    - _Diffuse: 0.5
-    - _FaceDilate: 0
-    - _FaceUVSpeedX: 0
-    - _FaceUVSpeedY: 0
-    - _GlowInner: 0.05
-    - _GlowOffset: 0
-    - _GlowOuter: 0.05
-    - _GlowPower: 0.75
-    - _GradientScale: 6
-    - _LightAngle: 3.1416
-    - _MaskSoftnessX: 0
-    - _MaskSoftnessY: 0
-    - _OutlineSoftness: 0
-    - _OutlineUVSpeedX: 0
-    - _OutlineUVSpeedY: 0
-    - _OutlineWidth: 0
-    - _PerspectiveFilter: 0.875
-    - _Reflectivity: 10
-    - _ScaleRatioA: 0.8333333
-    - _ScaleRatioB: 0.6770833
-    - _ScaleRatioC: 0.6770833
-    - _ScaleX: 1
-    - _ScaleY: 1
-    - _ShaderFlags: 0
-    - _SpecularPower: 2
-    - _Stencil: 0
-    - _StencilComp: 8
-    - _StencilOp: 0
-    - _StencilReadMask: 255
-    - _StencilWriteMask: 255
-    - _TextureHeight: 512
-    - _TextureWidth: 512
-    - _UnderlayDilate: 0
-    - _UnderlayOffsetX: 0
-    - _UnderlayOffsetY: 0
-    - _UnderlaySoftness: 0
-    - _VertexOffsetX: 0
-    - _VertexOffsetY: 0
-    - _WeightBold: 0.75
-    - _WeightNormal: 0
-    m_Colors:
-    - _ClipRect: {r: 382.5, g: -44.999996, b: 367.5, a: 44.999996}
-    - _EnvMatrixRotation: {r: 0, g: 0, b: 0, a: 0}
-    - _FaceColor: {r: 1, g: 1, b: 1, a: 1}
-    - _GlowColor: {r: 0, g: 1, b: 0, a: 0.5}
-    - _MaskCoord: {r: 0, g: 0, b: 32767, a: 32767}
-    - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
-    - _ReflectFaceColor: {r: 0, g: 0, b: 0, a: 1}
-    - _ReflectOutlineColor: {r: 0, g: 0, b: 0, a: 1}
-    - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}
-    - _UnderlayColor: {r: 0, g: 0, b: 0, a: 0.5}
 --- !u!1 &2123448225
 GameObject:
   m_ObjectHideFlags: 0
@@ -1569,7 +1705,6 @@ GameObject:
   - component: {fileID: 2123448226}
   - component: {fileID: 2123448228}
   - component: {fileID: 2123448227}
-  - component: {fileID: 2123448229}
   m_Layer: 5
   m_Name: AlienTextBackground
   m_TagString: Untagged
@@ -1629,25 +1764,3 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2123448225}
---- !u!114 &2123448229
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2123448225}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1297475563, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Padding:
-    m_Left: 15
-    m_Right: 10
-    m_Top: 0
-    m_Bottom: 10
-  m_ChildAlignment: 0
-  m_Spacing: 0
-  m_ChildForceExpandWidth: 1
-  m_ChildForceExpandHeight: 1
-  m_ChildControlWidth: 1
-  m_ChildControlHeight: 1
