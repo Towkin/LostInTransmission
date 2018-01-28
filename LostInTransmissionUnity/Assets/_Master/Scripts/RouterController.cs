@@ -8,7 +8,10 @@ using UnityEngine;
 
 public class RouterController : MonoBehaviour {
     [SerializeField]
-    UnityEngine.UI.Text m_Text;
+    UnityEngine.UI.Text m_MessageText;
+    [SerializeField]
+    UnityEngine.UI.Image m_MessageImage;
+
 
     [SerializeField]
     UnityEngine.UI.Text m_SenderText;
@@ -40,7 +43,12 @@ public class RouterController : MonoBehaviour {
         m_BackLog.RemoveAt(0);
         m_History.Add(sendQuery);
 
+        if (m_BackLog.Count > 0)
+            BuildMessage(m_BackLog[0]);
+        
+
         sendQuery.Reciever.GetComponent<Faction>().RecieveMessage(sendQuery);
+
     }
 
     public void PushMessage(TranslateMessageData messageData, GameObject sender, GameObject reciever)
@@ -55,7 +63,7 @@ public class RouterController : MonoBehaviour {
         m_BackLog.Add(query);
 
         if (m_BackLog.Count == 1)
-            BuildText(m_BackLog[0]);
+            BuildMessage(m_BackLog[0]);
     }
 
     public void SetOptions(int optionSet, int optionIndex)
@@ -64,7 +72,7 @@ public class RouterController : MonoBehaviour {
             return;
 
         m_BackLog[0].MessageOptions[optionSet].CurrentOption = optionIndex;
-        BuildText(m_BackLog[0]);
+        BuildMessage(m_BackLog[0]);
     }
 
     // Use this for initialization
@@ -116,7 +124,7 @@ public class RouterController : MonoBehaviour {
     {
         yield return new WaitForEndOfFrame();
 
-        var textGen = m_Text.cachedTextGenerator;
+        var textGen = m_MessageText.cachedTextGenerator;
         foreach (var optionsBuilder in optionsBuilderList)
         {
             int firstIndex = optionsBuilder.m_CharIndices.x, lastIndex = optionsBuilder.m_CharIndices.y;
@@ -144,14 +152,14 @@ public class RouterController : MonoBehaviour {
             foreach (var buttonSize in buttonSizes)
             {
                 var buttonObject = new GameObject();
-                buttonObject.transform.SetParent(m_Text.transform.parent);
+                buttonObject.transform.SetParent(m_MessageText.transform.parent);
 
                 var rectTransform = buttonObject.AddComponent<RectTransform>();
-                rectTransform.transform.position = m_Text.transform.position + new Vector3(
+                rectTransform.transform.position = m_MessageText.transform.position + new Vector3(
                     buttonSize.position.x + buttonSize.length / 2,
-                    buttonSize.position.y - m_Text.fontSize / 2 - m_OptionTextPadding / 4);
+                    buttonSize.position.y - m_MessageText.fontSize / 2 - m_OptionTextPadding / 4);
                 rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, buttonSize.length + m_OptionTextPadding);
-                rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, m_Text.fontSize + m_OptionTextPadding);
+                rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, m_MessageText.fontSize + m_OptionTextPadding);
 
                 var button = buttonObject.AddComponent<UnityEngine.UI.Button>();
                 var image = buttonObject.AddComponent<UnityEngine.UI.Image>();
@@ -163,10 +171,10 @@ public class RouterController : MonoBehaviour {
                 CreateOptionsDropdown(rectTransform, optionSets[optionsBuilder.m_OptionSetIndex], optionsBuilder.m_OptionSetIndex);
             }
         }
-        m_Text.transform.SetSiblingIndex(1000);
+        m_MessageText.transform.SetSiblingIndex(1000);
     }
 
-    void BuildText(MessageQuery query)
+    void BuildMessage(MessageQuery query)
     {
         foreach (var item in m_DropdownOptions)
             Destroy(item);
@@ -178,6 +186,7 @@ public class RouterController : MonoBehaviour {
 
         m_SenderText.text = query.Sender.GetComponent<Faction>().FactionName;
         m_RecieverText.text = query.Reciever.GetComponent<Faction>().FactionName;
+        m_MessageImage.material.mainTexture = query.Sender.GetComponent<Faction>().FactionImage;
 
         var builder = new StringBuilder();
         var messages = query.MessageText;
@@ -199,7 +208,7 @@ public class RouterController : MonoBehaviour {
                 });
             }
         }
-        m_Text.text = builder.ToString();
+        m_MessageText.text = builder.ToString();
 
         StartCoroutine(BuildButtons(optionsBuilderList, query.Data.OptionSet));
     }

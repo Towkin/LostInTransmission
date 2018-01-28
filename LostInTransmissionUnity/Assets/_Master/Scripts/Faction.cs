@@ -15,6 +15,8 @@ public class Faction : MonoBehaviour {
     [SerializeField]
     GameObject m_Router;
 
+    
+
     [SerializeField]
     GameObject m_FirstContact;
     [SerializeField]
@@ -24,7 +26,12 @@ public class Faction : MonoBehaviour {
 
     [SerializeField]
     string m_FactionName;
+    [SerializeField]
+    Texture2D m_FactionImage;
+
     public string FactionName { get { return m_FactionName; } }
+    public Texture2D FactionImage { get { return m_FactionImage; } }
+
 
     const float m_MoodRate = 0.5f;
     const float m_MoodScale = 1.5f;
