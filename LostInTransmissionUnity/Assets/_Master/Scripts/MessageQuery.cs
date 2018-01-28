@@ -33,7 +33,7 @@ public class MessageQuery {
                     if (Data.OptionSet[j].Options.Count() < 2)
                         break;
 
-                    m_MessageParts[i] = new MessagePart(j);
+                    m_MessageParts[i] = new MessagePart(Data.OptionSet[j].Name, j);
                     break;
                 }
             }
@@ -47,22 +47,23 @@ public class MessageQuery {
             m_Text = text;
         }
 
-        public MessagePart(int optionSet)
+        public MessagePart(string defaultText, int optionSet)
         {
+            m_Text = defaultText;
             m_OptionSetIndex = optionSet;
-            m_CurrentOption = 0;
+            m_CurrentOption = -1;
             m_Dirty = true;
         }
 
         public void Update(ref TranslateMessageData.TranslateOptionSet[] optionSet)
         {
-            if (m_Dirty)
+            if (m_Dirty && m_CurrentOption >= 0)
                 m_Text = optionSet[m_OptionSetIndex].Options[CurrentOption].Text;
         }
 
         string m_Text;
         int m_OptionSetIndex = -1;
-        int m_CurrentOption = 0;
+        int m_CurrentOption = -1;
         bool m_Dirty = false;
 
         public string Text
