@@ -1,8 +1,181 @@
 MessageText	OptionKey	OptionText	OptionMoodKey	OptionMoodValue
-Need [boop boop boop]. Send [blep].				
-	boop boop boop	fungus to tackle.	hungry	2
-			angry	-5
-		slime to grease gear		
+Need [boop boop boop]. Send [blep].	boop boop boop	fungus to tackle.	Friendly	-1
+		slime to grease gear	Friendly 	2
+			Trading	2
+		slippery appendage.	Confusing	4
+				
+		now	Trading	4
+	blep	persistently	Confusing 	2
+			Trading	2
+		PDQ	Friendly	-2
+				
+Send the [bleeep] parts.	bleeep	new	Friendly 	3
+			Trading	3
+		fucking	Friendly	-5
+		fresh	Confusing	-2
+				
+This [bing] is needed for us to harvest [bings]. [Wing-wong-bing].				
+	bing	planet	Friendly	-2
+		resources	Trading	2
+		orb	Confusing	-1
+				
+	bings	resources	Trading	2
+		planet	Confusing	2
+		orb	Confusing	2
+				
+	Wing-wong-bing	Please evacuate the premises	Friendly	2
+		Go to hell	Friendly	-3
+		Kindly abandon planet	Friendly	2
+				
+We have decided to [ping] you to [parp] this [bing] is [ping-pong].				
+	ping	allow	Friendly	2
+		agree to	Friendly	1
+		contract	Friendly	-2
+				
+	parp	colonize	Friendly	-3
+		dominate	Friendly	-3
+		mine	Friendly	3
+				
+	bing	planet	Friendly	1
+		resources	Confusing	1
+		orb	Confusing	1
+				
+	ping-pong	beneficial for us both	Friendly	2
+		profitable action	Friendly	1
+		two clowns	Confusing	3
+				
+Stop [wing-wong-bong] or you will be removed by [weeo].				
+	wing-wong-bong	disturbing our operations	Friendly	-1
+		hindering medical procedure	Confusing	2
+		alarming actions	Confusing	1
+				
+	weeo	force	Friendly	-1
+		war	Friendly	-2
+		extermination	Friendly	-3
+				
+There will be no [ompf] as long a you [wirr woom]. Give up or [bi weeo]!				
+	ompf	peace	Friendly	1
+		cease fire	Friendly	-1
+		break off force	Friendly	-1
+				
+	wirr woom	continue aggression towards us	Friendly	-1
+		keep bothering the robots	Friendly	1
+		mean harm to slaves	Friendly	-2
+				
+	bi weeo	be exterminated	Friendly	-1
+		you will be forced	Friendly	-1
+		continue to wage war	Confusing	2
+				
+We are [pingling] you want [ompf], [meep]. 				
+	pingling	happy to hear	Friendly	2
+		attentively absorbing that	Friendly	1
+		jubilant ears	Confusing	1
+				
+	ompf	peace	Friendly	2
+		cease fire	Friendly	1
+		break off force	Confusing	2
+				
+	meep	so do we	Friendly	2
+		comply	Friendly	1
+		we engage	Confusing	1
 				
 				
-		slippery appendage.		
+It is good to know [pleep] [parp] even the minds of [beep-beep]. [Bleep] there with be [ompf] beteween us [plong]. 				
+	pleep	logic	Friendly	2
+		art	Confusing	1
+		math	Confusing	1
+				
+	parp	dominates	Friendly	-1
+		colonize	Friendly	1
+		mine	Confusing	1
+				
+	beep-beep	organics	Friendly	1
+		pod-pods	Confusing	1
+		traders	Trading	2
+			Confusing	1
+				
+	Bleep	Now	Friendly	1
+		Presistently	Confusing	1
+		PQD	Friendly	-1
+				
+	ompf	peace	Friendly	2
+		ceasefire	Friendly	2
+		break off force	Confusing	2
+				
+	plong	both	Friendly	2
+		coin	Confusing	2
+				
+				
+You are [eeee]. We will continue to [wo-weeo] and [plip bo-bip] your [bing] as long as we see fit!				
+	eeee	wrong	Friendly	-2
+		broken	Friendly	-1
+		an error	Confusing	3
+				
+	wo-weeo	wage war	Friendly	-1
+		exterminate	Friendly	-2
+		use force	Friendly	-1
+				
+	plip bo-bip	take	Friendly	-5
+		trade	Trade	2
+		have intimate association with	Confusing	2
+			Friendly	2
+				
+	bing	planets	Friendly	-1
+		resources	Trade	2
+		orb	Confusing	1
+				
+We robots are in need of a [po bip] of [bing]. We would like to [plip bo-bip] with you.				
+	po bip	large quantities of	Trading	2
+		huge sized	Confusing	2
+		expensive quality	Trading	2
+				
+	bing	resources	Trading	2
+		planet	Friendly	-2
+		orb	Confusing	2
+				
+	plip bo-bip	enter a trade agreement	Trading	4
+		take your stuff	Friendly	-4
+		have intimate association	Confusing	4
+			Friendly	1
+				
+Your suggestion to [pip bo-blip] is [ping-pong]. We [ping].				
+	pip bo-blip	trade	Trading	3
+		take our stuff	Friendly	-3
+		have intimate association	Confusing	2
+				
+	ping-pong	benefical for us both	Trading	2
+			Friendly	2
+		a profitable action	Trading	2
+		two clowns	Confusing	3
+				
+	ping	agree	Friendly	2
+		allow it	Friendly	-1
+		have a contract	Trading	2
+				
+What you offer [pi bip]. We [pi bo-bip].	pi bip	have no value to us	Trading	-2
+		is to small	Confusing	1
+		is a too small quantity	Trading	-1
+				
+	pi bo-bip	will not trade	Trading	-2
+		do not want intimate association	Friendly	-1
+		will not take your stuff	Trading	-1
+				
+[Pip bo-blip] is [eep]. Take your [eeee] [bing] elsewhere.				
+	Pip bo-blip	trade	Trading	1
+		take our stuff	Confusing	2
+			Trading	1
+		have intimate association	Confusing	2
+				
+	eep	no longer desirable	Trading	-2
+		bad	Friendly	-2
+		short and ugly	Friendly	-1
+			Confusing	-2
+				
+	eeee	faulty	Friendly	-2
+		broken	Friendly	-1
+		errorous	Confusing	2
+				
+	bing	resources	Trade	-1
+		planet	Friendly	-1
+			Confusing	2
+		orb	Confusing	3
