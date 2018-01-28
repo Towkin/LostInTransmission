@@ -12,18 +12,40 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: 114271075601062846}
-  - {fileID: 114546821907032052}
+  - {fileID: 114815217577276672}
+  - {fileID: 114687618378572970}
   EditorEvents:
-  - {fileID: 114245448620245914}
-  - {fileID: 114199252634503916}
-  - {fileID: 114030571065091300}
-  - {fileID: 114110304093578034}
-  - {fileID: 114367708845704476}
-  MasterBankRef: {fileID: 114546821907032052}
-  StringsBankRef: {fileID: 114271075601062846}
-  stringsBankWriteTime: 636526542405799085
+  - {fileID: 114947600027250864}
+  - {fileID: 114028242169875060}
+  - {fileID: 114191191007305516}
+  - {fileID: 114662859835088386}
+  - {fileID: 114229202270211462}
+  MasterBankRef: {fileID: 114687618378572970}
+  StringsBankRef: {fileID: 114815217577276672}
+  stringsBankWriteTime: 636527215927974359
   cacheVersion: 2
+--- !u!114 &114028242169875060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Effects/UI/Button_Dropdown
+  guid: 91444e5e82069f41949179256469dde8
+  Banks:
+  - {fileID: 114687618378572970}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 330
 --- !u!114 &114030571065091300
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -68,6 +90,28 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 603
+--- !u!114 &114191191007305516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Soundtrack/Soundtrack_01
+  guid: 96b57ab8dfd2c042a2053caf881d493a
+  Banks:
+  - {fileID: 114687618378572970}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &114199252634503916
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -90,6 +134,28 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 330
+--- !u!114 &114229202270211462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Effects/UI/Button_Back
+  guid: edf298d917abac49b405671b1c64bc6b
+  Banks:
+  - {fileID: 114687618378572970}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 447
 --- !u!114 &114245448620245914
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -171,3 +237,85 @@ MonoBehaviour:
   - Name: Desktop
     Value: 30592
   Exists: 1
+--- !u!114 &114662859835088386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Effects/UI/Button_Accept
+  guid: d5fccf18fddd0a4a8fed4001c47e3638
+  Banks:
+  - {fileID: 114687618378572970}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 603
+--- !u!114 &114687618378572970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\Projekt\LostInTransmission\LostInTransmissionFMOD\Build\Desktop\Master
+    Bank.bank
+  lastModified: 636527215927647920
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 30592
+  Exists: 1
+--- !u!114 &114815217577276672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\Projekt\LostInTransmission\LostInTransmissionFMOD\Build\Desktop\Master
+    Bank.strings.bank
+  lastModified: 636527215927974359
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 926
+  Exists: 1
+--- !u!114 &114947600027250864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Effects/UI/Button_Navigate
+  guid: 04fea1ca2807044f8d4541e6ad0e5f1a
+  Banks:
+  - {fileID: 114687618378572970}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 115
