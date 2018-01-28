@@ -12,17 +12,17 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: 114815217577276672}
-  - {fileID: 114687618378572970}
+  - {fileID: 114101787472641316}
+  - {fileID: 114459424996525902}
   EditorEvents:
-  - {fileID: 114947600027250864}
-  - {fileID: 114028242169875060}
-  - {fileID: 114191191007305516}
-  - {fileID: 114662859835088386}
-  - {fileID: 114229202270211462}
-  MasterBankRef: {fileID: 114687618378572970}
-  StringsBankRef: {fileID: 114815217577276672}
-  stringsBankWriteTime: 636527215927974359
+  - {fileID: 114129766715564272}
+  - {fileID: 114957010619054292}
+  - {fileID: 114292207238457676}
+  - {fileID: 114155911002712402}
+  - {fileID: 114034126801002754}
+  MasterBankRef: {fileID: 114459424996525902}
+  StringsBankRef: {fileID: 114101787472641316}
+  stringsBankWriteTime: 636527390234034871
   cacheVersion: 2
 --- !u!114 &114028242169875060
 MonoBehaviour:
@@ -68,6 +68,47 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &114034126801002754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Effects/UI/Button_Back
+  guid: edf298d917abac49b405671b1c64bc6b
+  Banks:
+  - {fileID: 114459424996525902}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 447
+--- !u!114 &114101787472641316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\Projekt\LostInTransmission\LostInTransmissionFMOD\Build\Desktop\Master
+    Bank.strings.bank
+  lastModified: 636527390234034871
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 924
+  Exists: 1
 --- !u!114 &114110304093578034
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -83,6 +124,50 @@ MonoBehaviour:
   guid: d5fccf18fddd0a4a8fed4001c47e3638
   Banks:
   - {fileID: 114546821907032052}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 603
+--- !u!114 &114129766715564272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Effects/UI/Button_Navigate
+  guid: 04fea1ca2807044f8d4541e6ad0e5f1a
+  Banks:
+  - {fileID: 114459424996525902}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 115
+--- !u!114 &114155911002712402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Effects/UI/Button_Accept
+  guid: d5fccf18fddd0a4a8fed4001c47e3638
+  Banks:
+  - {fileID: 114459424996525902}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -196,6 +281,29 @@ MonoBehaviour:
   - Name: Desktop
     Value: 926
   Exists: 1
+--- !u!114 &114292207238457676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Soundtrack/Soundtrack
+  guid: 96b57ab8dfd2c042a2053caf881d493a
+  Banks:
+  - {fileID: 114459424996525902}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 114488833295024456}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 16695
 --- !u!114 &114367708845704476
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -218,6 +326,40 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 447
+--- !u!114 &114459424996525902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\Projekt\LostInTransmission\LostInTransmissionFMOD\Build\Desktop\Master
+    Bank.bank
+  lastModified: 636527390233984852
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 1560704
+  Exists: 1
+--- !u!114 &114488833295024456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: MusicOverTime
+  Min: 0
+  Max: 10
+  Default: 0
 --- !u!114 &114546821907032052
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -319,3 +461,25 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 115
+--- !u!114 &114957010619054292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Effects/UI/Button_Dropdown
+  guid: 91444e5e82069f41949179256469dde8
+  Banks:
+  - {fileID: 114459424996525902}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 330
