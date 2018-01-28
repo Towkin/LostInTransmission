@@ -1,0 +1,1043 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1035125205274194}
+  m_IsPrefabParent: 1
+--- !u!1 &1035125205274194
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4738284286354768}
+  m_Layer: 0
+  m_Name: Factions
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1309309566027012
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4386150357301738}
+  - component: {fileID: 114009619163109884}
+  - component: {fileID: 114842971858905256}
+  m_Layer: 0
+  m_Name: Faction - Empire
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1432817161559806
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4126302118734708}
+  - component: {fileID: 114405753234351054}
+  - component: {fileID: 114578320133656932}
+  m_Layer: 0
+  m_Name: Faction - Snails
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4126302118734708
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1432817161559806}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -505.01065, y: 160.54286, z: -2.543398}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4738284286354768}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4386150357301738
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1309309566027012}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -505.01065, y: 160.54286, z: -2.543398}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4738284286354768}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4738284286354768
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1035125205274194}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1006.1056, y: 117.406876, z: -1.8125}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4126302118734708}
+  - {fileID: 4386150357301738}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114009619163109884
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1309309566027012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e651f5a743a2484da4cb581c62a08dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Database: {fileID: 102900000, guid: b8f9ff414ea9d1d439fc57a9358e1c40, type: 3}
+  m_Messages:
+  - Text: '[Whoop]! Beautiful, [roro pofooie]! -Trade Empire'
+    MoodSet: []
+    OptionSet:
+    - Name: Whoop
+      Options:
+      - Text: Selling
+        MoodSet:
+        - Name: Trading
+          Modification: 5
+      - Text: Negotiation
+        MoodSet:
+        - Name: Trading
+          Modification: 1
+      - Text: Look
+        MoodSet:
+        - Name: Trading
+          Modification: 1
+    - Name: roro pofooie
+      Options:
+      - Text: rare fur
+        MoodSet:
+        - Name: 'Friendly '
+          Modification: 1
+      - Text: limited fluff
+        MoodSet:
+        - Name: Confusing
+          Modification: 1
+      - Text: extinct animal
+        MoodSet:
+        - Name: Friendly
+          Modification: -3
+  - Text: Regarding the [eooik] in the East part of the universe. We are sending out
+      [uupopop] as soon as possible.
+    MoodSet: []
+    OptionSet:
+    - Name: eooik
+      Options:
+      - Text: starvation
+        MoodSet:
+        - Name: Friendly
+          Modification: 2
+      - Text: weight-reduction plan
+        MoodSet:
+        - Name: Friendly
+          Modification: -5
+      - Text: regimen
+        MoodSet:
+        - Name: Confusing
+          Modification: 2
+    - Name: uupopop
+      Options:
+      - Text: food supplies
+        MoodSet:
+        - Name: Friendly
+          Modification: 1
+      - Text: office supplies
+        MoodSet:
+        - Name: Friendly
+          Modification: -1
+      - Text: whatchamacallit
+        MoodSet:
+        - Name: Confusing
+          Modification: 1
+  - Text: If this [smolp] [nnopg] continues, there will be [qp].
+    MoodSet: []
+    OptionSet:
+    - Name: smolp
+      Options:
+      - Text: childish
+        MoodSet:
+        - Name: Friendly
+          Modification: -1
+      - Text: innocuous
+        MoodSet:
+        - Name: Confusing
+          Modification: 1
+      - Text: sterile
+        MoodSet:
+        - Name: Confusing
+          Modification: 1
+    - Name: nnopg
+      Options:
+      - Text: name calling
+        MoodSet:
+        - Name: Friendly
+          Modification: -1
+      - Text: alias derogate
+        MoodSet:
+        - Name: Friendly
+          Modification: -1
+      - Text: nomenclature
+        MoodSet:
+        - Name: Confusing
+          Modification: 1
+    - Name: qp
+      Options:
+      - Text: consequences
+        MoodSet:
+        - Name: Friendly
+          Modification: -1
+      - Text: a sequel
+        MoodSet:
+        - Name: Confusing
+          Modification: 3
+      - Text: a morass
+        MoodSet:
+        - Name: Confusing
+          Modification: 1
+  - Text: We are glad that the [orkp] could be solved in a [cuop noym]. [Iiiol oill]
+      for everyone.
+    MoodSet: []
+    OptionSet:
+    - Name: orkp
+      Options:
+      - Text: conflict
+        MoodSet:
+        - Name: Friendly
+          Modification: 2
+      - Text: battle royal
+        MoodSet:
+        - Name: Friendly
+          Modification: -1
+      - Text: shindig
+        MoodSet:
+        - Name: Confusing
+          Modification: 1
+    - Name: cuop noym
+      Options:
+      - Text: civilized manner
+        MoodSet:
+        - Name: Friendly
+          Modification: 2
+      - Text: laid-back surrender
+        MoodSet:
+        - Name: Confusing
+          Modification: 1
+      - Text: idiosyncrasy traits
+        MoodSet:
+        - Name: Friendly
+          Modification: -2
+    - Name: Iiiol oill
+      Options:
+      - Text: Ice cream
+        MoodSet:
+        - Name: Friendly
+          Modification: 5
+      - Text: Cold milk
+        MoodSet:
+        - Name: Confusing
+          Modification: 1
+      - Text: Permafrost
+        MoodSet:
+        - Name: Friendly
+          Modification: -4
+  - Text: The great Trade Empire [hupo] [rtootr].
+    MoodSet: []
+    OptionSet:
+    - Name: hupo
+      Options:
+      - Text: declares
+        MoodSet:
+        - Name: Friendly
+          Modification: -3
+      - Text: swears
+        MoodSet:
+        - Name: Friendly
+          Modification: -3
+      - Text: curses
+        MoodSet:
+        - Name: Friendly
+          Modification: 5
+    - Name: rtootr
+      Options:
+      - Text: war
+        MoodSet:
+        - Name: Friendly
+          Modification: -5
+      - Text: Inconvinience
+        MoodSet:
+        - Name: Confusing
+          Modification: 3
+      - Text: Trade oppurtunity
+        MoodSet:
+        - Name: Trading
+          Modification: 5
+  - Text: We [oowip] [op op] to [ropp opopooo] in our universe.
+    MoodSet: []
+    OptionSet:
+    - Name: oowip
+      Options:
+      - Text: plead
+        MoodSet:
+        - Name: Friendly
+          Modification: 4
+      - Text: crawl
+        MoodSet:
+        - Name: Friendly
+          Modification: 1
+      - Text: deign
+        MoodSet:
+        - Name: Friendly
+          Modification: -2
+    - Name: op op
+      Options:
+      - Text: an alliance
+        MoodSet:
+        - Name: Friendly
+          Modification: 4
+      - Text: a marriage
+        MoodSet:
+        - Name: Confusing
+          Modification: 2
+      - Text: a blood bond
+        MoodSet:
+        - Name: Confusing
+          Modification: 2
+    - Name: ropp opopooo
+      Options:
+      - Text: keep the peace
+        MoodSet:
+        - Name: Friendly
+          Modification: 3
+      - Text: hold the privilege
+        MoodSet:
+        - Name: Friendly
+          Modification: -3
+      - Text: grip the love
+        MoodSet:
+        - Name: Confusing
+          Modification: 3
+  - Text: Do you agree to our [opopooo] terms?
+    MoodSet: []
+    OptionSet:
+    - Name: opopooo
+      Options:
+      - Text: peace
+        MoodSet:
+        - Name: Friendly
+          Modification: 4
+      - Text: privilege
+        MoodSet:
+        - Name: Friendly
+          Modification: -4
+      - Text: love
+        MoodSet:
+        - Name: Confusing
+          Modification: 3
+  - Text: Do you have any [arorwp] to our [uu uu] letter?
+    MoodSet: []
+    OptionSet:
+    - Name: arorwp
+      Options:
+      - Text: answer
+        MoodSet:
+        - Name: Friendly
+          Modification: 3
+      - Text: rebuttal
+        MoodSet:
+        - Name: Friendly
+          Modification: -1
+      - Text: defense
+        MoodSet:
+        - Name: Friendly
+          Modification: 2
+    - Name: uu uu
+      Options:
+      - Text: unity
+        MoodSet:
+        - Name: Friendly
+          Modification: 2
+      - Text: fusion
+        MoodSet:
+        - Name: Friendly
+          Modification: -2
+      - Text: mixer
+        MoodSet:
+        - Name: Confusing
+          Modification: 3
+  - Text: We are [aoaoaoa] to see that the [uu up] of the universe is a priority.
+    MoodSet: []
+    OptionSet:
+    - Name: aoaoaoa
+      Options:
+      - Text: delighted
+        MoodSet:
+        - Name: Friendly
+          Modification: 3
+      - Text: in the twilight zone
+        MoodSet:
+        - Name: Friendly
+          Modification: -3
+      - Text: floating
+        MoodSet:
+        - Name: Confusing
+          Modification: 3
+    - Name: uu up
+      Options:
+      - Text: union
+        MoodSet:
+        - Name: Friendly
+          Modification: 1
+      - Text: hook-up
+        MoodSet:
+        - Name: Confusing
+          Modification: 1
+      - Text: network
+        MoodSet:
+        - Name: Trading
+          Modification: 1
+  - Text: We are [co] by the fact that you seek [aosadfpg].
+    MoodSet: []
+    OptionSet:
+    - Name: co
+      Options:
+      - Text: saddened
+        MoodSet:
+        - Name: Friendly
+          Modification: 2
+      - Text: not complaining
+        MoodSet:
+        - Name: Friendly
+          Modification: -4
+      - Text: heartbroken
+        MoodSet:
+        - Name: Confusing
+          Modification: 3
+    - Name: aosadfpg
+      Options:
+      - Text: chaos
+        MoodSet:
+        - Name: Friendly
+          Modification: 1
+      - Text: topsy-turviness
+        MoodSet:
+        - Name: Confusing
+          Modification: -2
+      - Text: anarchy
+        MoodSet:
+        - Name: Friendly
+          Modification: -1
+  - Text: '[Orpo hue tomm p o p]?'
+    MoodSet: []
+    OptionSet:
+    - Name: Orpo hue tomm p o p
+      Options:
+      - Text: Who wants to trade
+        MoodSet:
+        - Name: Trading
+          Modification: 5
+      - Text: Swiping and swaping anybody
+        MoodSet:
+        - Name: Trading
+          Modification: 3
+      - Text: Let us argue
+        MoodSet:
+        - Name: Friendly
+          Modification: -2
+  - Text: '[Opi dopi].'
+    MoodSet: []
+    OptionSet:
+    - Name: Opi dopi
+      Options:
+      - Text: We accept
+        MoodSet:
+        - Name: Trading
+          Modification: 2
+      - Text: Gospel truth
+        MoodSet:
+        - Name: Friendly
+          Modification: 4
+      - Text: We swallow
+        MoodSet:
+        - Name: Confusing
+          Modification: 3
+  - Text: '[Opi ooo].'
+    MoodSet: []
+    OptionSet:
+    - Name: Opi ooo
+      Options:
+      - Text: We decline
+        MoodSet:
+        - Name: Friendly
+          Modification: 2
+      - Text: We defeat
+        MoodSet:
+        - Name: Friendly
+          Modification: -2
+      - Text: Belly flop
+        MoodSet:
+        - Name: Confusing
+          Modification: 2
+  - Text: '[Toffp].'
+    MoodSet: []
+    OptionSet:
+    - Name: Toffp
+      Options:
+      - Text: The deal is off
+        MoodSet:
+        - Name: Trading
+          Modification: -2
+      - Text: You broke it
+        MoodSet:
+        - Name: Confusing
+          Modification: 1
+      - Text: Cheapskate
+        MoodSet:
+        - Name: Friendly
+          Modification: -2
+--- !u!114 &114405753234351054
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1432817161559806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e651f5a743a2484da4cb581c62a08dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Database: {fileID: 102900000, guid: c6481a193d2be634c89919f261142da2, type: 3}
+  m_Messages:
+  - Text: '[Noot-noot]! A few of us have lost our [ell-ell] due to some [u-uish].
+      Can we buy [fa ell-ell] from you? [Er-er], the Pod-Pods.'
+    MoodSet: []
+    OptionSet:
+    - Name: Noot-noot
+      Options:
+      - Text: Hi
+        MoodSet:
+        - Name: Friendly
+          Modification: 2
+      - Text: Want
+        MoodSet:
+        - Name: Trading
+          Modification: 2
+      - Text: Bye
+        MoodSet:
+        - Name: Confusing
+          Modification: 2
+    - Name: ell-ell
+      Options:
+      - Text: shells
+        MoodSet:
+        - Name: Trading
+          Modification: 2
+      - Text: framework
+        MoodSet:
+        - Name: Trading
+          Modification: -2
+      - Text: husk
+        MoodSet:
+        - Name: Confusing
+          Modification: 2
+    - Name: u-uish
+      Options:
+      - Text: misunderstandings
+        MoodSet:
+        - Name: Friendly
+          Modification: 3
+      - Text: illusions
+        MoodSet:
+        - Name: Confusing
+          Modification: 3
+      - Text: lies
+        MoodSet:
+        - Name: Friendly
+          Modification: -3
+    - Name: fa ell-ell
+      Options:
+      - Text: artificial shells
+        MoodSet:
+        - Name: Trading
+          Modification: 3
+      - Text: pretty homes
+        MoodSet:
+        - Name: Friendly Trading
+          Modification: 2
+      - Text: figment of head trips
+        MoodSet:
+        - Name: Confusing
+          Modification: 3
+    - Name: Er-er
+      Options:
+      - Text: Kind
+        MoodSet:
+        - Name: Friendly
+          Modification: 2
+      - Text: Edible
+        MoodSet:
+        - Name: Friendly
+          Modification: -3
+      - Text: Good
+        MoodSet:
+        - Name: Confusing
+          Modification: -1
+  - Text: It have come to our knowledge that you are interested in [unel] on the same
+      [bopple] as us. We would [ben-ka] to share this [bopple] as equals!
+    MoodSet: []
+    OptionSet:
+    - Name: unel
+      Options:
+      - Text: settle
+        MoodSet:
+        - Name: Friendly
+          Modification: 2
+      - Text: calm down
+        MoodSet:
+        - Name: Confusing
+          Modification: 1
+      - Text: undo
+        MoodSet:
+        - Name: Confusing
+          Modification: 2
+    - Name: bopple
+      Options:
+      - Text: planet
+        MoodSet:
+        - Name: Friendly
+          Modification: 2
+      - Text: eye
+        MoodSet:
+        - Name: Friendly
+          Modification: -2
+      - Text: apple
+        MoodSet:
+        - Name: Confusing
+          Modification: 2
+    - Name: ben-ka
+      Options:
+      - Text: Love to
+        MoodSet:
+        - Name: Friendly
+          Modification: 3
+      - Text: Have no choice
+        MoodSet:
+        - Name: Friendly
+          Modification: -1
+      - Text: demand
+        MoodSet:
+        - Name: Friendly
+          Modification: -3
+    - Name: bopple
+      Options:
+      - Text: planet
+        MoodSet:
+        - Name: Friendly
+          Modification: 2
+      - Text: eye
+        MoodSet:
+        - Name: Friendly
+          Modification: -2
+      - Text: apple
+        MoodSet:
+        - Name: Confusing
+          Modification: 2
+  - Text: I think we can put this [u-uish] behind us. We [dun-to-ti] your [ieew-vew]
+      and will [pot-sot].
+    MoodSet: []
+    OptionSet:
+    - Name: u-uish
+      Options:
+      - Text: misunderstandings
+        MoodSet:
+        - Name: Friendly
+          Modification: 3
+      - Text: illusions
+        MoodSet:
+        - Name: Confusing
+          Modification: 3
+      - Text: lies
+        MoodSet:
+        - Name: Friendly
+          Modification: -3
+    - Name: dun-to-ti
+      Options:
+      - Text: Understand
+        MoodSet:
+        - Name: Friendly
+          Modification: 3
+      - Text: Know
+        MoodSet:
+        - Name: Friendly
+          Modification: 1
+      - Text: Frown at
+        MoodSet:
+        - Name: Friendly
+          Modification: -2
+    - Name: ieew-vew
+      Options:
+      - Text: point-of-view
+        MoodSet:
+        - Name: Friendly
+          Modification: 2
+      - Text: dreams
+        MoodSet:
+        - Name: Confusing
+          Modification: 2
+      - Text: plans
+        MoodSet:
+        - Name: Friendly
+          Modification: -1
+    - Name: pot-sot
+      Options:
+      - Text: halt our expansion
+        MoodSet:
+        - Name: Friendly
+          Modification: 3
+      - Text: stay where we are
+        MoodSet:
+        - Name: Friendly
+          Modification: 1
+      - Text: stop growing
+        MoodSet:
+        - Name: Confusing
+          Modification: 1
+  - Text: Your [ik-ki] will get you [wheeee]! The pod-pods have just as much right
+      to the [poolka] as you. Cease your [hoststt] or [quen]!
+    MoodSet: []
+    OptionSet:
+    - Name: ik-ki
+      Options:
+      - Text: insults
+        MoodSet:
+        - Name: Friendly
+          Modification: -4
+      - Text: poking
+        MoodSet:
+        - Name: Friendly
+          Modification: 1
+      - Text: particle
+        MoodSet:
+        - Name: Confusing
+          Modification: 2
+    - Name: wheeee
+      Options:
+      - Text: nowhere
+        MoodSet:
+        - Name: Friendly
+          Modification: -2
+      - Text: space
+        MoodSet:
+        - Name: Friendly
+          Modification: 2
+      - Text: time
+        MoodSet:
+        - Name: Confusing
+          Modification: 1
+    - Name: poolka
+      Options:
+      - Text: everything
+        MoodSet:
+        - Name: Friendly
+          Modification: -4
+      - Text: home
+        MoodSet:
+        - Name: Friendly
+          Modification: 2
+      - Text: universe
+        MoodSet:
+        - Name: Friendly
+          Modification: 2
+    - Name: umbaat
+      Options:
+      - Text: disagreement
+        MoodSet:
+        - Name: Friendly
+          Modification: -2
+      - Text: war
+        MoodSet:
+        - Name: Friendly
+          Modification: -2
+      - Text: conflict
+        MoodSet:
+        - Name: Friendly
+          Modification: -1
+    - Name: quen
+      Options:
+      - Text: face the consequences
+        MoodSet:
+        - Name: Friendly
+          Modification: -4
+      - Text: have some salt
+        MoodSet:
+        - Name: Friendly
+          Modification: 2
+      - Text: your face fall off
+        MoodSet:
+        - Name: Friendly Confusing
+          Modification: -2
+  - Text: '[Bee-eel]?'
+    MoodSet: []
+    OptionSet:
+    - Name: Bee-eel
+      Options:
+      - Text: Peace pretty please
+        MoodSet: []
+      - Text: Pretty calm pennies
+        MoodSet: []
+      - Text: Calm pleasing ocean
+        MoodSet: []
+  - Text: '[Shh-shh]?'
+    MoodSet: []
+    OptionSet:
+    - Name: Shh-shh
+      Options:
+      - Text: Pardon
+        MoodSet:
+        - Name: Friendly
+          Modification: 2
+      - Text: Lifeboat
+        MoodSet:
+        - Name: Confusing
+          Modification: 1
+      - Text: Soft-hearted
+        MoodSet:
+        - Name: Friendly
+          Modification: -1
+  - Text: '[Eel-fu-fu]?'
+    MoodSet: []
+    OptionSet:
+    - Name: Eel-fu-fu
+      Options:
+      - Text: Peace deal
+        MoodSet:
+        - Name: Friendly
+          Modification: 2
+      - Text: Pretty card
+        MoodSet:
+        - Name: Confusing
+          Modification: 2
+      - Text: Calm buy
+        MoodSet:
+        - Name: Trading
+          Modification: 2
+  - Text: '[Fu-fu]!'
+    MoodSet: []
+    OptionSet:
+    - Name: Fu-fu
+      Options:
+      - Text: Deal
+        MoodSet:
+        - Name: Friendly
+          Modification: 1
+      - Text: Card
+        MoodSet:
+        - Name: Confusing
+          Modification: 1
+      - Text: Buy
+        MoodSet:
+        - Name: Trading
+          Modification: 1
+  - Text: '[Umbaat]!'
+    MoodSet: []
+    OptionSet:
+    - Name: Umbaat
+      Options:
+      - Text: War
+        MoodSet:
+        - Name: Friendly
+          Modification: -2
+      - Text: Dissagrement
+        MoodSet:
+        - Name: Friendly
+          Modification: -2
+      - Text: Contest
+        MoodSet:
+        - Name: Friendly
+          Modification: -1
+  - Text: Due to recent events we are short on [er-er] things. [Pod-pod ben-ka] [slofs]
+      as [mee-ka] as possible or we fear a lot of the pod-pods will [e-eta].
+    MoodSet: []
+    OptionSet:
+    - Name: er-er
+      Options:
+      - Text: Edible
+        MoodSet:
+        - Name: Friendly
+          Modification: 3
+      - Text: Good
+        MoodSet:
+        - Name: Friendly
+          Modification: 2
+      - Text: Kind
+        MoodSet:
+        - Name: Confusing
+          Modification: -1
+    - Name: Pod-pod ben-ka
+      Options:
+      - Text: We would love you to send us
+        MoodSet:
+        - Name: Trading
+          Modification: 2
+      - Text: We have no choice but to send you
+        MoodSet:
+        - Name: Confusing
+          Modification: 2
+      - Text: We want you to send us
+        MoodSet:
+        - Name: Friendly
+          Modification: -1
+    - Name: slofs
+      Options:
+      - Text: Wares
+        MoodSet:
+        - Name: Trading
+          Modification: 2
+      - Text: gift
+        MoodSet:
+        - Name: Trading
+          Modification: -2
+      - Text: supplies
+        MoodSet:
+        - Name: Trading
+          Modification: 1
+    - Name: mee-ka
+      Options:
+      - Text: Quickly
+        MoodSet:
+        - Name: Friendly
+          Modification: 2
+      - Text: Sloppy
+        MoodSet:
+        - Name: Friendly
+          Modification: -2
+      - Text: Poor
+        MoodSet:
+        - Name: Confusing
+          Modification: -2
+    - Name: e-eta
+      Options:
+      - Text: die
+        MoodSet:
+        - Name: Friendly
+          Modification: 2
+      - Text: Explode
+        MoodSet:
+        - Name: Friendly
+          Modification: -2
+      - Text: Change colour
+        MoodSet:
+        - Name: Confusing
+          Modification: 2
+  - Text: '[Nyn]!'
+    MoodSet: []
+    OptionSet:
+    - Name: nyn
+      Options:
+      - Text: Yes
+        MoodSet:
+        - Name: Friendly
+          Modification: 2
+      - Text: Amen
+        MoodSet:
+        - Name: Confusing
+          Modification: 1
+      - Text: Good enough
+        MoodSet:
+        - Name: Friendly
+          Modification: -1
+  - Text: '[Nop]'
+    MoodSet: []
+    OptionSet:
+    - Name: Nop
+      Options:
+      - Text: No
+        MoodSet:
+        - Name: Friendly
+          Modification: 2
+      - Text: Never
+        MoodSet:
+        - Name: Friendly
+          Modification: -2
+      - Text: Christ
+        MoodSet:
+        - Name: Confusing
+          Modification: 2
+  - Text: '[Ksk-ek].'
+    MoodSet: []
+    OptionSet:
+    - Name: Ksk-ek
+      Options:
+      - Text: Breaking off this deal
+        MoodSet:
+        - Name: Friendly
+          Modification: 1
+      - Text: Stopping this madness
+        MoodSet:
+        - Name: Friendly
+          Modification: -2
+      - Text: Splitting minds
+        MoodSet:
+        - Name: Confusing
+          Modification: 1
+--- !u!114 &114578320133656932
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1432817161559806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8053eba7c11e96844be4a314566a49c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Router: {fileID: 0}
+  m_FirstContact: {fileID: 1309309566027012}
+  m_FirstContactMoodName: Friendly
+  m_FirstContactMoodValue: 5
+  m_FactionName: Snails
+  m_FactionImage: {fileID: 21300000, guid: aadcc92af16d92d42a4cf1efb9c59ee5, type: 3}
+--- !u!114 &114842971858905256
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1309309566027012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8053eba7c11e96844be4a314566a49c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Router: {fileID: 0}
+  m_FirstContact: {fileID: 0}
+  m_FirstContactMoodName: 
+  m_FirstContactMoodValue: 0
+  m_FactionName: Empire
+  m_FactionImage: {fileID: 21300000, guid: aadcc92af16d92d42a4cf1efb9c59ee5, type: 3}

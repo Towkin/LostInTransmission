@@ -27,10 +27,10 @@ public class Faction : MonoBehaviour {
     [SerializeField]
     string m_FactionName;
     [SerializeField]
-    Texture2D m_FactionImage;
+    Sprite m_FactionImage;
 
     public string FactionName { get { return m_FactionName; } }
-    public Texture2D FactionImage { get { return m_FactionImage; } }
+    public Sprite FactionImage { get { return m_FactionImage; } }
 
 
     const float m_MoodRate = 0.5f;

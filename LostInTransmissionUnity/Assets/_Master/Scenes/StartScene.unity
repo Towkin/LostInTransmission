@@ -272,6 +272,58 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
+--- !u!1001 &174387484
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4738284286354768, guid: 0fb6c38d76a419e4f8614d712e53759c, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 1006.1056
+      objectReference: {fileID: 0}
+    - target: {fileID: 4738284286354768, guid: 0fb6c38d76a419e4f8614d712e53759c, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 117.406876
+      objectReference: {fileID: 0}
+    - target: {fileID: 4738284286354768, guid: 0fb6c38d76a419e4f8614d712e53759c, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -1.8125
+      objectReference: {fileID: 0}
+    - target: {fileID: 4738284286354768, guid: 0fb6c38d76a419e4f8614d712e53759c, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4738284286354768, guid: 0fb6c38d76a419e4f8614d712e53759c, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4738284286354768, guid: 0fb6c38d76a419e4f8614d712e53759c, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4738284286354768, guid: 0fb6c38d76a419e4f8614d712e53759c, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4738284286354768, guid: 0fb6c38d76a419e4f8614d712e53759c, type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114578320133656932, guid: 0fb6c38d76a419e4f8614d712e53759c,
+        type: 2}
+      propertyPath: m_Router
+      value: 
+      objectReference: {fileID: 318696713}
+    - target: {fileID: 114842971858905256, guid: 0fb6c38d76a419e4f8614d712e53759c,
+        type: 2}
+      propertyPath: m_Router
+      value: 
+      objectReference: {fileID: 318696713}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 0fb6c38d76a419e4f8614d712e53759c, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &252973509
 GameObject:
   m_ObjectHideFlags: 0
@@ -361,7 +413,6 @@ GameObject:
   m_Component:
   - component: {fileID: 318696715}
   - component: {fileID: 318696714}
-  - component: {fileID: 318696716}
   m_Layer: 0
   m_Name: Router
   m_TagString: Untagged
@@ -380,7 +431,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a3f67aabdaf7df48b736021c2620a5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Text: {fileID: 108645418}
+  m_MessageText: {fileID: 108645418}
+  m_MessageImage: {fileID: 1662442079}
+  m_SenderText: {fileID: 83919381}
+  m_RecieverText: {fileID: 1874942144}
   m_OptionDropdownTemplate: {fileID: 1454386949057856, guid: 019a27f7c7854aa40b11f575dccc7abf,
     type: 2}
   m_OptionTextColor: {r: 0.41079152, g: 0.9632353, b: 0.62033916, a: 0.528}
@@ -398,427 +452,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &318696716
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 318696713}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7e651f5a743a2484da4cb581c62a08dd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Database: {fileID: 102900000, guid: 9928a3177fd8e3245a734594cf749a04, type: 3}
-  m_Messages:
-  - Text: '[Whoop]! Beautiful, [roro_pofooie]! -Trade Empire'
-    MoodSet: []
-    OptionSet:
-    - Name: Whoop
-      Options:
-      - Text: Selling
-        MoodSet:
-        - Name: Trading
-          Modification: 5
-      - Text: Negotiation
-        MoodSet:
-        - Name: Trading
-          Modification: 1
-      - Text: Look
-        MoodSet:
-        - Name: Trading
-          Modification: 1
-    - Name: roro_pofooie
-      Options:
-      - Text: rare fur
-        MoodSet:
-        - Name: 'Friendly '
-          Modification: 1
-      - Text: limited fluff
-        MoodSet:
-        - Name: Confusing
-          Modification: 1
-      - Text: extinct animal
-        MoodSet:
-        - Name: Friendly
-          Modification: -3
-  - Text: Regarding the [eooik] in the East part of the universe. We are sending out
-      [uupopop] as soon as possible.
-    MoodSet: []
-    OptionSet:
-    - Name: eooik
-      Options:
-      - Text: starvation
-        MoodSet:
-        - Name: Friendly
-          Modification: 2
-      - Text: weight-reduction plan
-        MoodSet:
-        - Name: Friendly
-          Modification: -5
-      - Text: regimen
-        MoodSet:
-        - Name: Confusing
-          Modification: 2
-    - Name: uupopop
-      Options:
-      - Text: food supplies
-        MoodSet:
-        - Name: Friendly
-          Modification: 1
-      - Text: office supplies
-        MoodSet:
-        - Name: Friendly
-          Modification: -1
-      - Text: whatchamacallit
-        MoodSet:
-        - Name: Confusing
-          Modification: 1
-  - Text: If this [smolp] [nnopg] continues, there will be [qp].
-    MoodSet: []
-    OptionSet:
-    - Name: smolp
-      Options:
-      - Text: childish
-        MoodSet:
-        - Name: Friendly
-          Modification: -1
-      - Text: innocuous
-        MoodSet:
-        - Name: Confusing
-          Modification: 1
-      - Text: sterile
-        MoodSet:
-        - Name: Confusing
-          Modification: 1
-    - Name: nnopg
-      Options:
-      - Text: name calling
-        MoodSet:
-        - Name: Friendly
-          Modification: -1
-      - Text: alias derogate
-        MoodSet:
-        - Name: Friendly
-          Modification: -1
-      - Text: nomenclature
-        MoodSet:
-        - Name: Confusing
-          Modification: 1
-    - Name: qp
-      Options:
-      - Text: consequences
-        MoodSet:
-        - Name: Friendly
-          Modification: -1
-      - Text: a sequel
-        MoodSet:
-        - Name: Confusing
-          Modification: 3
-      - Text: a morass
-        MoodSet:
-        - Name: Confusing
-          Modification: 1
-  - Text: We are glad that the [orkp] could be solved in a [cuop_noym]. [Iiiol_oill]
-      for everyone.
-    MoodSet: []
-    OptionSet:
-    - Name: orkp
-      Options:
-      - Text: conflict
-        MoodSet:
-        - Name: Friendly
-          Modification: 2
-      - Text: battle royal
-        MoodSet:
-        - Name: Friendly
-          Modification: -1
-      - Text: shindig
-        MoodSet:
-        - Name: Confusing
-          Modification: 1
-    - Name: cuop_noym
-      Options:
-      - Text: civilized manner
-        MoodSet:
-        - Name: Friendly
-          Modification: 2
-      - Text: laid-back surrender
-        MoodSet:
-        - Name: Confusing
-          Modification: 1
-      - Text: idiosyncrasy traits
-        MoodSet:
-        - Name: Friendly
-          Modification: -2
-    - Name: Iiiol_oill
-      Options:
-      - Text: Ice cream
-        MoodSet:
-        - Name: Friendly
-          Modification: 5
-      - Text: Cold milk
-        MoodSet:
-        - Name: Confusing
-          Modification: 1
-      - Text: Permafrost
-        MoodSet:
-        - Name: Friendly
-          Modification: -4
-  - Text: The great Trade Empire [hupo] [rootr].
-    MoodSet: []
-    OptionSet:
-    - Name: hupo
-      Options:
-      - Text: declares
-        MoodSet:
-        - Name: Friendly
-          Modification: -3
-      - Text: swears
-        MoodSet:
-        - Name: Friendly
-          Modification: -3
-      - Text: curses
-        MoodSet:
-        - Name: Friendly
-          Modification: 5
-    - Name: rootr
-      Options:
-      - Text: war
-        MoodSet:
-        - Name: Friendly
-          Modification: -5
-      - Text: Inconvinience
-        MoodSet:
-        - Name: Confusing
-          Modification: 3
-      - Text: Trade oppurtunity
-        MoodSet:
-        - Name: Trading
-          Modification: 5
-  - Text: We [oowip] [op_op] to [ropp_opopooo] in our universe.
-    MoodSet: []
-    OptionSet:
-    - Name: oowip
-      Options:
-      - Text: plead
-        MoodSet:
-        - Name: Friendly
-          Modification: 4
-      - Text: crawl
-        MoodSet:
-        - Name: Friendly
-          Modification: 1
-      - Text: deign
-        MoodSet:
-        - Name: Friendly
-          Modification: -2
-    - Name: op_op
-      Options:
-      - Text: an alliance
-        MoodSet:
-        - Name: Friendly
-          Modification: 4
-      - Text: a marriage
-        MoodSet:
-        - Name: Confusing
-          Modification: 2
-      - Text: a blood bond
-        MoodSet:
-        - Name: Confusing
-          Modification: 2
-    - Name: ropp_opopooo
-      Options:
-      - Text: keep the peace
-        MoodSet:
-        - Name: Friendly
-          Modification: 3
-      - Text: hold the privilege
-        MoodSet:
-        - Name: Friendly
-          Modification: -3
-      - Text: grip the love
-        MoodSet:
-        - Name: Confusing
-          Modification: 3
-  - Text: Do you agree to our [opopooo] terms?
-    MoodSet: []
-    OptionSet:
-    - Name: opopooo
-      Options:
-      - Text: peace
-        MoodSet:
-        - Name: Friendly
-          Modification: 4
-      - Text: privilege
-        MoodSet:
-        - Name: Friendly
-          Modification: -4
-      - Text: love
-        MoodSet:
-        - Name: Confusing
-          Modification: 3
-  - Text: Do you have any [arorwp] to our [uu_uu] letter?
-    MoodSet: []
-    OptionSet:
-    - Name: arorwp
-      Options:
-      - Text: answer
-        MoodSet:
-        - Name: Friendly
-          Modification: 3
-      - Text: rebuttal
-        MoodSet:
-        - Name: Friendly
-          Modification: -1
-      - Text: defense
-        MoodSet:
-        - Name: Friendly
-          Modification: 2
-    - Name: uu_uu
-      Options:
-      - Text: unity
-        MoodSet:
-        - Name: Friendly
-          Modification: 2
-      - Text: fusion
-        MoodSet:
-        - Name: Friendly
-          Modification: -2
-      - Text: mixer
-        MoodSet:
-        - Name: Confusing
-          Modification: 3
-  - Text: We are [aoaoaoa] to see that the [uu_up] of the universe is a priority.
-    MoodSet: []
-    OptionSet:
-    - Name: aoaoaoa
-      Options:
-      - Text: delighted
-        MoodSet:
-        - Name: Friendly
-          Modification: 3
-      - Text: in the twilight zone
-        MoodSet:
-        - Name: Friendly
-          Modification: -3
-      - Text: floating
-        MoodSet:
-        - Name: Confusing
-          Modification: 3
-    - Name: uu_up
-      Options:
-      - Text: union
-        MoodSet:
-        - Name: Friendly
-          Modification: 1
-      - Text: hook-up
-        MoodSet:
-        - Name: Confusing
-          Modification: 1
-      - Text: network
-        MoodSet:
-        - Name: Trading
-          Modification: 1
-  - Text: We are [co] by the fact that you seek [aosadfpg].
-    MoodSet: []
-    OptionSet:
-    - Name: co
-      Options:
-      - Text: saddened
-        MoodSet:
-        - Name: Friendly
-          Modification: 2
-      - Text: not complaining
-        MoodSet:
-        - Name: Friendly
-          Modification: -4
-      - Text: heartbroken
-        MoodSet:
-        - Name: Confusing
-          Modification: 3
-    - Name: aosadfpg
-      Options:
-      - Text: chaos
-        MoodSet:
-        - Name: Friendly
-          Modification: 1
-      - Text: topsy-turviness
-        MoodSet:
-        - Name: Confusing
-          Modification: -2
-      - Text: anarchy
-        MoodSet:
-        - Name: Friendly
-          Modification: -1
-  - Text: '[Orpo_hue_tomm_p_o_p]?'
-    MoodSet: []
-    OptionSet:
-    - Name: Orpo_hue_tomm_p_o_p
-      Options:
-      - Text: Who wants to trade
-        MoodSet:
-        - Name: Trading
-          Modification: 5
-      - Text: Swiping and swaping anybody
-        MoodSet:
-        - Name: Trading
-          Modification: 3
-      - Text: Let us argue
-        MoodSet:
-        - Name: Friendly
-          Modification: -2
-  - Text: '[Opi_dopi].'
-    MoodSet: []
-    OptionSet:
-    - Name: Opi_dopi
-      Options:
-      - Text: We accept
-        MoodSet:
-        - Name: Trading
-          Modification: 2
-      - Text: Gospel truth
-        MoodSet:
-        - Name: Friendly
-          Modification: 4
-      - Text: We swallow
-        MoodSet:
-        - Name: Confusing
-          Modification: 3
-  - Text: '[Opi_ooo].'
-    MoodSet: []
-    OptionSet:
-    - Name: Opi_ooo
-      Options:
-      - Text: We decline
-        MoodSet:
-        - Name: Friendly
-          Modification: 2
-      - Text: We defeat
-        MoodSet:
-        - Name: Friendly
-          Modification: -2
-      - Text: Belly flop
-        MoodSet:
-        - Name: Confusing
-          Modification: 2
-  - Text: '[Toffp].'
-    MoodSet: []
-    OptionSet:
-    - Name: Toffp
-      Options:
-      - Text: The deal is off
-        MoodSet:
-        - Name: Trading
-          Modification: -2
-      - Text: You broke it
-        MoodSet:
-        - Name: Confusing
-          Modification: 1
-      - Text: Cheapskate
-        MoodSet:
-        - Name: Friendly
-          Modification: -2
 --- !u!1 &565831240
 GameObject:
   m_ObjectHideFlags: 0
@@ -918,7 +551,7 @@ RectTransform:
   - {fileID: 1625370278}
   - {fileID: 83919380}
   m_Father: {fileID: 1386927541}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
@@ -1330,7 +963,7 @@ RectTransform:
   - {fileID: 2123448226}
   - {fileID: 915917416}
   m_Father: {fileID: 1386927541}
-  m_RootOrder: 2
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -1449,17 +1082,17 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1386927540}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -304.7896, z: 0}
+  m_LocalPosition: {x: 0, y: -10, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1662442078}
   - {fileID: 919703564}
-  - {fileID: 1215079389}
   - {fileID: 566280667}
   - {fileID: 1612140190}
   - {fileID: 1688555538}
-  m_Father: {fileID: 1896171968}
-  m_RootOrder: 2
+  - {fileID: 1215079389}
+  m_Father: {fileID: 2108070275}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
@@ -1492,12 +1125,12 @@ RectTransform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1421256809}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -524.1096, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -229.32, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1896171968}
-  m_RootOrder: 1
+  m_Father: {fileID: 2108070275}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
@@ -1618,7 +1251,7 @@ RectTransform:
   - {fileID: 973018097}
   - {fileID: 1874942143}
   m_Father: {fileID: 1386927541}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
@@ -1808,7 +1441,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: aadcc92af16d92d42a4cf1efb9c59ee5, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1852,7 +1485,7 @@ RectTransform:
   m_Children:
   - {fileID: 1767875899}
   m_Father: {fileID: 1386927541}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
@@ -1898,7 +1531,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1688555540}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 318696714}
+        m_MethodName: SendMessage
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1688555540
@@ -2168,8 +1812,7 @@ RectTransform:
   m_LocalScale: {x: 0.58177084, y: 0.58177084, z: 0.58177084}
   m_Children:
   - {fileID: 565831241}
-  - {fileID: 1421256810}
-  - {fileID: 1386927541}
+  - {fileID: 2108070275}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2178,6 +1821,59 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &2108070274
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 2108070275}
+  - component: {fileID: 2108070276}
+  m_Layer: 5
+  m_Name: DialogueSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2108070275
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2108070274}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -294.7896, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1421256810}
+  - {fileID: 1386927541}
+  m_Father: {fileID: 1896171968}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 1100, y: 380}
+  m_Pivot: {x: 0.5, y: 0}
+--- !u!95 &2108070276
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2108070274}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 77e2aab451a6f8a4aa0a9996dc82cc3e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &2123448225
 GameObject:
   m_ObjectHideFlags: 0

@@ -186,7 +186,7 @@ public class RouterController : MonoBehaviour {
 
         m_SenderText.text = query.Sender.GetComponent<Faction>().FactionName;
         m_RecieverText.text = query.Reciever.GetComponent<Faction>().FactionName;
-        m_MessageImage.material.mainTexture = query.Sender.GetComponent<Faction>().FactionImage;
+        m_MessageImage.sprite = query.Sender.GetComponent<Faction>().FactionImage;
 
         var builder = new StringBuilder();
         var messages = query.MessageText;
