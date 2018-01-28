@@ -83,6 +83,12 @@ public class MessageQuery {
                 m_CurrentOption = value;
             }
         }
+
+        public bool HasBeenSet
+        {
+            get { return m_CurrentOption >= 0; }
+        }
+
         
         public bool IsOption { get { return m_OptionSetIndex >= 0; } }
     }
