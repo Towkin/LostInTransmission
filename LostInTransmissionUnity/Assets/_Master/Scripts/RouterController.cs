@@ -16,6 +16,7 @@ public class RouterController : MonoBehaviour {
     List<MessageQuery> m_BackLog = new List<MessageQuery>();
 
     List<GameObject> m_Buttons = new List<GameObject>();
+    List<GameObject> m_DropdownOptions = new List<GameObject>();
 
     public void SendMessage(TranslateMessageData messageData)
     {
@@ -35,14 +36,19 @@ public class RouterController : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        SendMessage(GetComponent<MessageDatabase>().Messages[5]);
+        
+        SendMessage(GetComponent<MessageDatabase>().Messages[Random.Range(0, GetComponent<MessageDatabase>().Messages.Length)]);
         
         BuildText(m_BackLog[0]);
     }
 
     // Update is called once per frame
     void Update () {
-        
+        //if(Input.GetButtonDown("Primary"))
+        //{
+        //    foreach (var item in m_DropdownOptions)
+        //        item.SetActive(false);
+        //}
     }
 
     class OptionButtonBuilder
@@ -59,20 +65,23 @@ public class RouterController : MonoBehaviour {
 
     void CreateOptionsDropdown(RectTransform parentRect, TranslateMessageData.TranslateOptionSet optionSet, int optionSetIndex)
     {
-        for(int i = 0; i < optionSet.Options.Length; i++)
+        var setParent = new GameObject(optionSet.Name + " options");
+        setParent.transform.SetParent(parentRect.parent);
+        parentRect.GetComponent<UnityEngine.UI.Button>().onClick.AddListener(setParent.AddComponent<MessageOptionDropdown>().Activate);
+        m_DropdownOptions.Add(setParent);
+
+        for (int i = 0; i < optionSet.Options.Length; i++)
         {
             var dropdownItem = Instantiate(m_OptionDropdownTemplate);
             dropdownItem.GetComponentInChildren<UnityEngine.UI.Text>().text = optionSet.Options[i].Text;
-            dropdownItem.GetComponent<MessageOptionDropdown>().m_OptionSetIndex = optionSetIndex;
-            dropdownItem.GetComponent<MessageOptionDropdown>().m_SelectOptionIndex = i;
-            dropdownItem.GetComponent<MessageOptionDropdown>().m_Router = this;
+            dropdownItem.GetComponent<MessageOptionDropdownItem>().m_OptionSetIndex = optionSetIndex;
+            dropdownItem.GetComponent<MessageOptionDropdownItem>().m_SelectOptionIndex = i;
+            dropdownItem.GetComponent<MessageOptionDropdownItem>().m_Router = this;
             dropdownItem.transform.position = parentRect.position + new Vector3(0, -dropdownItem.GetComponent<RectTransform>().rect.height * (i + 1));
 
-            dropdownItem.transform.SetParent(parentRect);
-            dropdownItem.SetActive(false);
-
-            parentRect.GetComponent<UnityEngine.UI.Button>().onClick.AddListener(dropdownItem.GetComponent<MessageOptionDropdown>().Activate);
+            dropdownItem.transform.SetParent(setParent.transform);
         }
+        setParent.SetActive(false);
     }
 
     IEnumerator BuildButtons(List<OptionButtonBuilder> optionsBuilderList, TranslateMessageData.TranslateOptionSet[] optionSets)
@@ -126,11 +135,15 @@ public class RouterController : MonoBehaviour {
                 CreateOptionsDropdown(rectTransform, optionSets[optionsBuilder.m_OptionSetIndex], optionsBuilder.m_OptionSetIndex);
             }
         }
-        m_Text.transform.SetSiblingIndex(100);
+        m_Text.transform.SetSiblingIndex(1000);
     }
 
     void BuildText(MessageQuery query)
     {
+        foreach (var item in m_DropdownOptions)
+            Destroy(item);
+        m_DropdownOptions.Clear();
+
         foreach (var button in m_Buttons)
             Destroy(button);
         m_Buttons.Clear();
