@@ -134,18 +134,10 @@ public class MessageDatabase : MonoBehaviour
                     // Skip the entire line if it has the column name.
                     if (columns[(int)DatabaseColumn.MessageText] == "MessageText")
                         continue;
-                    var s = "";
-                    bool inBracket = false;
-                    foreach (var t in columns[(int)DatabaseColumn.MessageText])
-                    {
-                        if (t == '[') inBracket = true;
-                        if (t == ']') inBracket = false;
-                        if (inBracket && t == ' ') s += "_";
-                        else s += t;
-                    }
+                    
                     messages.Add(new TranslateMessageDataLister
                     {
-                        Text = s
+                        Text = columns[(int)DatabaseColumn.MessageText]
                     });
                 }
 
@@ -157,7 +149,7 @@ public class MessageDatabase : MonoBehaviour
                 {
                     currentMessage.OptionSet.Add(new TranslateMessageDataLister.TranslateOptionSet()
                     {
-                        Name = columns[(int)DatabaseColumn.OptionKey].Replace(' ', '_')
+                        Name = columns[(int)DatabaseColumn.OptionKey]
                     });
                 }
 

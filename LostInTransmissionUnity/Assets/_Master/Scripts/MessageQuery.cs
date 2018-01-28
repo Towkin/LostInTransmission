@@ -12,6 +12,9 @@ public class MessageQuery {
         get { return m_Data; }
     }
 
+    public GameObject Sender { get; set; }
+    public GameObject Reciever { get; set; }
+
     public void SetData(TranslateMessageData newData)
     {
         m_Data = newData;
