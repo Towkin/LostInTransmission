@@ -226,7 +226,7 @@ Prefab:
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
-    - target: {fileID: 114102676635019036, guid: 0fb6c38d76a419e4f8614d712e53759c,
+    - target: {fileID: 114578320133656932, guid: 0fb6c38d76a419e4f8614d712e53759c,
         type: 2}
       propertyPath: m_Router
       value: 
@@ -236,25 +236,25 @@ Prefab:
       propertyPath: m_Router
       value: 
       objectReference: {fileID: 318696713}
-    - target: {fileID: 114578320133656932, guid: 0fb6c38d76a419e4f8614d712e53759c,
+    - target: {fileID: 114102676635019036, guid: 0fb6c38d76a419e4f8614d712e53759c,
         type: 2}
       propertyPath: m_Router
       value: 
       objectReference: {fileID: 318696713}
-    - target: {fileID: 114102676635019036, guid: 0fb6c38d76a419e4f8614d712e53759c,
+    - target: {fileID: 114578320133656932, guid: 0fb6c38d76a419e4f8614d712e53759c,
         type: 2}
-      propertyPath: m_FirstContact
-      value: 
-      objectReference: {fileID: 796927609}
-    - target: {fileID: 114102676635019036, guid: 0fb6c38d76a419e4f8614d712e53759c,
+      propertyPath: m_FactionAudioEvent
+      value: event:/Voice/Snail
+      objectReference: {fileID: 0}
+    - target: {fileID: 114842971858905256, guid: 0fb6c38d76a419e4f8614d712e53759c,
         type: 2}
-      propertyPath: m_FirstContactMoodName
-      value: Trading
+      propertyPath: m_FactionAudioEvent
+      value: event:/Voice/Empire
       objectReference: {fileID: 0}
     - target: {fileID: 114102676635019036, guid: 0fb6c38d76a419e4f8614d712e53759c,
         type: 2}
-      propertyPath: m_FirstContactMoodValue
-      value: 10
+      propertyPath: m_FactionAudioEvent
+      value: event:/Voice/Robot
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0fb6c38d76a419e4f8614d712e53759c, type: 2}
@@ -569,11 +569,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 566280666}
---- !u!1 &796927609 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1432817161559806, guid: 0fb6c38d76a419e4f8614d712e53759c,
-    type: 2}
-  m_PrefabInternal: {fileID: 174387484}
 --- !u!4 &821884952 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4742240981259356, guid: aa6c5c89fbb50cb4da4dbbdbec9dfc96,
@@ -1074,7 +1069,6 @@ GameObject:
   - component: {fileID: 1421256811}
   - component: {fileID: 1421256813}
   - component: {fileID: 1421256814}
-  - component: {fileID: 1421256815}
   m_Layer: 5
   m_Name: Backlog
   m_TagString: Untagged
@@ -1140,7 +1134,7 @@ Animator:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1421256809}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 4239c34b412807f45bbf57610667d15d, type: 2}
   m_CullingMode: 0
@@ -1161,28 +1155,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b852e0f79efdcc34f95aaee617a1df44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1421256815
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1421256809}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: 
-  PlayEvent: 0
-  StopEvent: 0
-  CollisionTag: 
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: -1
-  OverrideMaxDistance: -1
 --- !u!1 &1612140189
 GameObject:
   m_ObjectHideFlags: 0
@@ -1633,7 +1605,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Event: event:/Effects/UI/Button_Accept
+  Event: event:/Effects/UI/Button_Send
   PlayEvent: 0
   StopEvent: 0
   CollisionTag: 

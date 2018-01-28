@@ -30,9 +30,13 @@ public class Faction : MonoBehaviour {
     [SerializeField]
     Sprite m_FactionImage;
 
+    [FMODUnity.EventRef]
+    [SerializeField]
+    string m_FactionAudioEvent;
+
     public string FactionName { get { return m_FactionName; } }
     public Sprite FactionImage { get { return m_FactionImage; } }
-
+    public string FactionAudioEvent { get { return m_FactionAudioEvent; } }
 
     const float m_MoodRate = 0.5f;
     const float m_MoodScale = 1.5f;

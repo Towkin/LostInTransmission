@@ -223,7 +223,7 @@ Transform:
   m_GameObject: {fileID: 1242973415805702}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 15, y: 15, z: 15}
+  m_LocalScale: {x: 650, y: 650, z: 650}
   m_Children: []
   m_Father: {fileID: 4622660032215546}
   m_RootOrder: 0
@@ -350,7 +350,7 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1242973415805702}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 4300000, guid: 5f179c0d2efb8ac448c03609864aacb9, type: 3}
 --- !u!65 &65854263626239732
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -837,6 +837,7 @@ MonoBehaviour:
   m_FirstContactMoodValue: 10
   m_FactionName: Robots
   m_FactionImage: {fileID: 21300000, guid: 023610aa311c903489789e1cb597f4c8, type: 3}
+  m_FactionAudioEvent: 
 --- !u!114 &114213633432769576
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1976,6 +1977,7 @@ MonoBehaviour:
   m_FirstContactMoodValue: 5
   m_FactionName: Snails
   m_FactionImage: {fileID: 21300000, guid: d83f334342f07ef4eb3b393c8c8f4e41, type: 3}
+  m_FactionAudioEvent: 
 --- !u!114 &114842971858905256
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1995,3 +1997,4 @@ MonoBehaviour:
   m_FirstContactMoodValue: 0
   m_FactionName: Empire
   m_FactionImage: {fileID: 21300000, guid: aadcc92af16d92d42a4cf1efb9c59ee5, type: 3}
+  m_FactionAudioEvent: 

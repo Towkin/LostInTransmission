@@ -5,6 +5,8 @@ using UnityEngine;
 public class MessageOptionDropdown : MonoBehaviour {
 
     GameObject blocker = null;
+    
+    const string m_SelectAudioEvent = "event:/Effects/UI/Menu_Dropdown";
 
     public void Activate()
     {
@@ -30,6 +32,8 @@ public class MessageOptionDropdown : MonoBehaviour {
             var image = blocker.AddComponent<UnityEngine.UI.Image>();
             blockButton.targetGraphic = image;
             image.color = new Color(0, 0, 0, 0.0f);
+
+            FMODUnity.RuntimeManager.PlayOneShot(m_SelectAudioEvent);
         }
 
         blocker.transform.SetSiblingIndex(1000);

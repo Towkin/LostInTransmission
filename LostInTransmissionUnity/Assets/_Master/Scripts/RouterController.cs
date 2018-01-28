@@ -78,8 +78,11 @@ public class RouterController : MonoBehaviour {
         signal.m_Query = sendQuery;
 
         if (m_BackLog.Count > 0)
+        {
             BuildMessage(m_BackLog[0]);
 
+            FMODUnity.RuntimeManager.PlayOneShot(m_BackLog[0].Sender.GetComponent<Faction>().FactionAudioEvent);
+        }
     }
 
     public void PushMessage(MessageQuery query)
@@ -90,6 +93,7 @@ public class RouterController : MonoBehaviour {
         {
             BuildMessage(m_BackLog[0]);
 
+            FMODUnity.RuntimeManager.PlayOneShot(m_BackLog[0].Sender.GetComponent<Faction>().FactionAudioEvent);
         }
             
     }
