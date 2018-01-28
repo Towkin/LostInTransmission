@@ -1,0 +1,129 @@
+MessageText	OptionKey	OptionText	OptionMoodKey	OptionMoodValue
+[Noot-noot]! A few of us have lost our [ell-ell] due to some [u-uish]. Can we buy [fa ell-ell] from you? [Er-er], the Pod-Pods.				
+	Noot-noot	Hi	Friendly	2
+		Want	Trading	2
+		Bye	Confusing	2
+				
+	ell-ell	shells	Trading	2
+		framework	Trading	-2
+		husk	Confusing	2
+				
+	u-uish	misunderstandings	Friendly	3
+		illusions	Confusing	3
+		lies	Friendly	-3
+				
+	fa ell-ell	artificial shells	Trading	3
+		pretty homes	Friendly 	2
+			Trading	2
+		figment of head trips	Confusing	3
+				
+	Er-er	Kind	Friendly	2
+		Edible	Friendly	-3
+		Good	Confusing	-1
+It have come to our knowledge that you are interested in [unel] on the same [bopple] as us. We would [ben-ka] to share this [bopple] as equals!				
+	unel	settle	Friendly	2
+		calm down	Confusing	1
+		undo	Confusing	2
+				
+	bopple	planet	Friendly	2
+		eye	Friendly	-2
+		apple	Confusing	2
+				
+	ben-ka	Love to	Friendly	3
+		Have no choice	Friendly	-1
+		demand	Friendly	-3
+				
+	bopple	planet	Friendly	2
+		eye	Friendly	-2
+		apple	Confusing	2
+I think we can put this [u-uish] behind us. We [dun-to-ti] your [ieew-vew] and will [pot-sot].				
+	u-uish	misunderstandings	Friendly	3
+		illusions	Confusing	3
+		lies	Friendly	-3
+				
+	dun-to-ti	Understand	Friendly	3
+		Know	Friendly	1
+		Frown at	Friendly	-2
+				
+	ieew-vew	point-of-view	Friendly	2
+		dreams	Confusing	2
+		plans	Friendly	-1
+				
+	pot-sot	halt our expansion	Friendly	3
+		stay where we are	Friendly	1
+		stop growing	Confusing	1
+				
+Your [ik-ki] will get you [wheeee]! The pod-pods have just as much right to the [poolka] as you. Cease your [umbaat] or [quen]!				
+	ik-ki	insults	Friendly	-4
+		poking	Friendly	1
+		particle	Confusing	2
+				
+	wheeee	nowhere	Friendly	-2
+		space	Friendly	2
+		time	Confusing	1
+				
+	poolka	everything	Friendly	-4
+		home	Friendly	2
+		universe	Friendly	2
+				
+	umbaat	disagreement	Friendly	-2
+		war	Friendly	-2
+		conflict	Friendly	-1
+				
+	quen	face the consequences	Friendly	-4
+		have some salt	Friendly	2
+		your face fall off	Friendly 	-2
+			Confusing	2
+				
+[Bee-eel]?	Bee-eel	Peace pretty please		
+		Pretty calm pennies		
+		Calm pleasing ocean		
+				
+[Shh-shh]?	Shh-shh	Pardon	Friendly	2
+		Lifeboat	Confusing	1
+		Soft-hearted	Friendly	-1
+				
+[Eel-fu-fu]?	Eel-fu-fu	Peace deal	Friendly	2
+		Pretty card	Confusing	2
+		Calm buy	Trading	2
+				
+[Fu-fu]!	Fu-fu	Deal	Friendly	1
+		Card	Confusing	1
+		Buy	Trading	1
+				
+[Umbaat]!	Umbaat	War	Friendly	-2
+		Dissagrement	Friendly	-2
+		Contest	Friendly	-1
+				
+Due to recent events we are short on [er-er] things. [Pod-pod ben-ka] [slofs] as [mee-ka] as possible or we fear a lot of the pod-pods will [e-eta].				
+	er-er	Edible	Friendly	3
+		Good	Friendly	2
+		Kind	Confusing	-1
+				
+	Pod-pod ben-ka	We would love you to send us	Trading	2
+		We have no choice but to send you	Confusing	2
+		We want you to send us	Friendly	-1
+				
+	slofs	Wares	Trading	2
+		gift	Trading	-2
+		supplies	Trading	1
+				
+	mee-ka	Quickly	Friendly	2
+		Sloppy	Friendly	-2
+		Poor	Confusing	-2
+				
+	e-eta	die	Friendly	2
+		Explode	Friendly	-2
+		Change colour	Confusing	2
+				
+[Nyn]!	Nyn	Yes	Friendly	2
+		Amen	Confusing	1
+		Good enough	Friendly	-1
+				
+[Nop]	Nop	No	Friendly	2
+		Never	Friendly	-2
+		Christ	Confusing	2
+				
+[Ksk-ek].	Ksk-ek	Breaking off this deal	Friendly	1
+		Stopping this madness	Friendly	-2
+		Splitting minds	Confusing	1
